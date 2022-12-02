@@ -1,0 +1,25 @@
+/*Educacion*/
+.Educacion {
+    display: flex;
+    margin: 30px;
+    border: 2px blue solid;
+}
+
+.anio {
+    background-color: red;
+    width: 30%;
+    padding: 20px;
+}
+
+.detalles {
+    color: black;
+    width: 70%;
+    padding: 20px;
+    background-color: antiquewhite;
+}
+
+.educacion {
+    border: 2px red solid;
+    margin: 10px;
+    height: 100vh;
+}
