@@ -1,15 +1,15 @@
-<div class="educacion" id="educacion">
+<div class="educacion" id="educacion" *ngFor=" let educacion of educacionList">
     <div class="tituloPrincipal">
       <h1>Educacion</h1>
     </div>
-    <div class="Educacion" id="educacion">
+    <div class="Educacion" id="educacion" >
 
       <div class="anio">
         <h2>2018-2022</h2>
         <h3>titulo</h3>
       </div>
       <div class="detalles">
-        <h2>Institucion</h2>
+        <h2>{{educacion.formacion.formacion}}</h2>
 
 
       </div>

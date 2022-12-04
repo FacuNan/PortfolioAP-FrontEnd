@@ -8,6 +8,7 @@ import { PerfilComponent } from './componentes/perfil/perfil.component';
 import { AcercaDeMiComponent } from './componentes/acerca-de-mi/acerca-de-mi.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
