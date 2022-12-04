@@ -38,14 +38,28 @@
       }
     ],
     
-    "formacion": 
+    "educacion": [
       {
         "formacion": "UNLP",
         "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/UNLP_Logo_%28cropped%29.svg/1200px-UNLP_Logo_%28cropped%29.svg.png",
+        "anioInicio":"2017",
+        "anioTerminacion":"actualidad",
+        "titulo":"profesorado de historia",
         "id": "c3f6df06-753a-403a-b184-18199d0a4e58"
-      }
+         },
+        {
+          "formacion":"Alura",
+          "img":"url",
+          "anioInicio":"2021",
+          "anioTerminacion":"actualidad",
+          "titulo":"Desarrollador Full stack",
+          "id": 3
+        }
+        
+        
+        ]
     ,
-    "proyectos": [
+    "experiencia": [
       {
         "titulo": "Encriptador 1",
         "descripcion": "Desafio Alura Latam",
