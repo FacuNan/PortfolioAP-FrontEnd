@@ -2,14 +2,14 @@
     <div class="tituloPrincipal">
       <h1>Experiencia Laboral</h1>
     </div>
-    <div class="Experiencia" id="experiencia">
+    <div class="Experiencia" id="experiencia"*ngFor="let experiencia of experienciaService">
 
       <div class="anio">
         <h2>2018-2022</h2>
-        <h3>Full stack developer JR</h3>
+        <h3>{{experiencia.descripcion}}</h3>
       </div>
       <div class="detalles">
-        <h2>Argentina Progarma</h2>
+        <h2>{{experiencia.titulo}}</h2>
 
 
       </div>

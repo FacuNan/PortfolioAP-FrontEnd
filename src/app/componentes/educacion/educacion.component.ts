@@ -12,7 +12,7 @@ constructor(private datosPortfolio: PortfolioService){}
 
 ngOnInit():void{
 this.datosPortfolio.obtenerDatos().subscribe(data => 
-  this.educacionList= data.formacion);
+  this.educacionList = data.educacion);
 
 
 }
