@@ -11,6 +11,9 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './componentes/login/login.component';
+import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
+import { ContactosComponent } from './componentes/contactos/contactos.component';
+import { FooterComponent } from './componentes/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { LoginComponent } from './componentes/login/login.component';
     AcercaDeMiComponent,
     EducacionComponent,
     ExperienciaComponent,
-    LoginComponent
+    LoginComponent,
+    ProyectosComponent,
+    ContactosComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
