@@ -1,0 +1,38 @@
+.footer{
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbfCulJF7fhIaKREUU_flnWu9QVQXo2BgTZ6uGw4Rnksala0uq4nXOtgQz3eHWb3q9rBc&usqp=CAU) no-repeat;
+    background-size: cover;
+    height:100vh;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.footer p{
+    color:whitesmoke;
+}
+
+.footer h1{
+    color:whitesmoke;
+}
+.footer__gif{
+    height:40vh;
+    width: 100%;
+}
+
+.footer .informacion-redesSociales_nav{
+    width: 500px;
+    text-align: center;
+    margin: 10px;
+    background-color: rgba(0,0,0,0.7);
+    padding: 30px;
+    border-radius: 10px;
+
+}
+
+.informacion-redesSociales_ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}

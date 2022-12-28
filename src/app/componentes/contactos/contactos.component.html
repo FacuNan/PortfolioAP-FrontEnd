@@ -1,0 +1,39 @@
+<section class="contacto">
+    <h2>Contactame</h2>
+    <form action="" class="formulario">
+        <fieldset>
+            <div class="input">
+
+                <label class="input-label" for="nombre">Nombre y apellido</label>
+                <input type="text" id="nombre" class="input input-padron" placeholder="Nombre y Apellido"
+                    data-tipo="nombre" required pattern="[A-Za-z]{4,50}">
+                <span class="input-message-error"></span>
+
+
+            </div>
+
+            <div class="input">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="input input-padron" placeholder="Email" required
+                    data-tipo="email">
+                <span class="input-message-error"></span>
+            </div>
+
+            <div class="input">
+                <label for="asunto">Asunto</label>
+                <input type="telefono" id="asunto" class=" input input-padron" placeholder="asunto" required
+                    data-tipo="asunto" pattern="[A-Za-z]{4,50}">
+                <span class="input-message-error"></span>
+            </div>
+
+            <div class="input">
+                <span class="input-message-error"></span>
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" class="input input-padron" placeholder="Mensaje"
+                    pattern="[A-Za-z]{4,300}" data-tipo="texto"></textarea>
+
+            </div>
+        </fieldset>
+        <input type="submit" value="Enviar" class="btn btn-primary enviar" disabled required>
+    </form>
+</section>

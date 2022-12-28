@@ -32,6 +32,11 @@
                     <li class="nav-item">
                         <a class="nav-link " href="#">Proyectos</a>
                     </li>
+                    <li class="nav-item"> <button class="btn btn-primary" routerLink="/login" *ngIf="!token" >Login</button>
+
+                    </li>
+                    
+                    <li><button class="btn btn-danger" *ngIf="token" (click)="logout()">Logout</button></li>
                 
                 </ul>
             </div>

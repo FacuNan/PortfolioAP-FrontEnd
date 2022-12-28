@@ -1,4 +1,5 @@
 import { Component, OnInit, ValueProvider } from '@angular/core';
+import { Router } from '@angular/router';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -8,8 +9,15 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class EncabezadoComponent implements OnInit{
   miPortfolio: any;
-constructor () {}
+  token = localStorage.getItem('token')
+constructor (private route: Router) {}
 ngOnInit(): void{
 
+
+}
+
+logout(){
+  localStorage.removeItem('token')
+  this.route.navigate(['login'])
 }
 }
