@@ -31,7 +31,8 @@ import { MaterialModule } from './modules/material/material.module';
     ContactosComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+   
    
     
 

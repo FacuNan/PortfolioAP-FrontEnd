@@ -28,29 +28,28 @@
         <div class="divider d-flex align-items-center my-4">
           <p class="text-center fw-bold mx-3 mb-0">Or</p>
         </div>
-        <mat-card>
+    
         <form [formGroup]="loginForm">
           <!-- Email input -->
             <div class="form-outline mb-4">
 
               <input matInput formControlName="correo" [(ngModel)]="email" id="form3Example3"
                 class="form-control form-control-lg" placeholder="Enter a valid email address" />
-              
-              <mat-error *ngIf="emails?.errors?.['required'] && emails?.touched ">El campo es obligatorio</mat-error>
-              <mat-error *ngIf="emails?.errors?.['email'] && emails?.touched ">El formato no es valido</mat-error>
+              <mat-error *ngIf="emails?.errors?.['required'] && emails?.touched">El campo es obligatorio</mat-error>
+              <mat-error *ngIf="emails?.errors?.['email'] && emails?.touched">El formato no es valido</mat-error>
             </div>
 
           <!-- Password input -->
           <div class="form-outline mb-3">
            
-              <input matInput formControlName="clave" type="password" id="form3Example4"
+              <input [(ngModel)]="password" matInput formControlName="clave" type="password" id="form3Example4"
                 class="form-control form-control-lg" placeholder="Enter password" />
-
-                <mat-error *ngIf="passwords?.errors?.['required'] && passwords?.touched ">El campo es obligatorio</mat-error>
+                <mat-error *ngIf="passwords?.errors?.['required'] && passwords?.touched">El campo es obligatorio</mat-error>
+              
           
           </div>
-        </form>
-      </mat-card>
+        
+    
         <div class="d-flex justify-content-between align-items-center">
           <!-- Checkbox -->
           <div class="form-check mb-0">
@@ -67,8 +66,9 @@
             (click)="loginUser()"  >Login</button>
           <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!" class="link-danger">Register</a>
           </p>
-        </div>
 
+        </div>
+      </form>
       </div>
     </div>
   </div>
