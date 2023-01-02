@@ -6,6 +6,7 @@
 }
 .informacion{
 display:flex;
+justify-content: center;
 
 }
 
@@ -32,6 +33,7 @@ display:flex;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color:aliceblue;
     
 }
 
@@ -56,4 +58,15 @@ display:flex;
     width:50%;
     background-color: rgba(0,0,0,0.7);
     color:white;
+}
+
+.informacion__basica-descripcion h3{
+    color:white;
+}
+
+.icon__edicion-perfil{
+    border: solid whitesmoke 1px;
+    padding:7px;
+    border-radius: 50%;
+    cursor: pointer;
 }

@@ -7,6 +7,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent  implements OnInit{
+  token = localStorage.getItem('token')
 
   miPortfolio: any;
 

@@ -1,10 +1,3 @@
-body {
-    background-image: url(https://content.techgig.com/photo/71488724/A-simple-GIF-is-all-it-takes-to-hack-your-WhatsApp.jpg);
-    color: aliceblue;
-    position: relative;
-    width: 100%;
-
-}
 
 
 
@@ -18,3 +11,6 @@ body {
 /*Experiencia*/
 
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

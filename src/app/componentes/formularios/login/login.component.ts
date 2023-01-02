@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/servicios/auth.service';
 
@@ -11,10 +12,31 @@ import { AuthService } from 'src/app/servicios/auth.service';
 export class LoginComponent implements OnInit {
   email: string = '';
   password : string = '';
-  constructor(private route: Router, private authSevice: AuthService) { }
+  loginForm: FormGroup = new FormGroup({});
+
+  constructor(private route: Router, private authSevice: AuthService, private formBuilder:FormBuilder) { }
   ngOnInit(): void {
     let token = localStorage.getItem('token')
+
+    this.loginForm= this.formBuilder.group({
+      correo:['',[ Validators.required, Validators.email]],
+     clave:['', [Validators.required]]
+
+
+    })
   }
+
+  get emails(){
+    return this.loginForm.get('correo')
+  }
+
+  get passwords(){
+    return this.loginForm.get('clave')
+  }
+
+
+
+
 
   loginUser() {
     this.authSevice.login(this.email, this.password).subscribe((response)=>{
@@ -23,7 +45,11 @@ export class LoginComponent implements OnInit {
         this.route.navigate(['']);
       }
     })
+
+  
   }
+
+
 
  
 }

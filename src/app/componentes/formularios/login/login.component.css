@@ -13,3 +13,12 @@ height: calc(100% - 73px);
 height: 100%;
 }
 }
+
+
+mat-error{
+    color:red;
+}
+
+body{
+    background-color: aliceblue;
+}

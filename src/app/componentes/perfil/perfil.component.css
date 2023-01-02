@@ -14,6 +14,14 @@
     align-items: center;
     padding: 10px;
     z-index: 1;
+    
+}
+.perfil__info-img {
+    position:relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
 }
 
 .perfil__info-img img {
@@ -22,6 +30,7 @@
     height: 300px;
     border: whitesmoke solid;
     transition: all 500ms ease-out;
+    
 }
 
 .perfil__info-img img:hover {
@@ -54,6 +63,26 @@
 
 }
 
+
+.icon__edicion-perfil {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    font-size: 20px;
+    position:absolute;
+    width:35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    bottom:20px;
+    cursor:pointer;
+
+}
+.fa-pen{
+    color:aliceblue;
+    text-decoration: none;
+}
 @keyframes typewriter {
     from {
         width: 0%;

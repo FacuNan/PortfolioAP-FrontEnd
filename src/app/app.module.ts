@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 import { LoginComponent } from './componentes/formularios/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from './modules/material/material.module';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     HomeComponent,
     LoginComponent
-    
+   
     
 
 
@@ -42,7 +43,9 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule 
+  
    
   ],
   providers: [],

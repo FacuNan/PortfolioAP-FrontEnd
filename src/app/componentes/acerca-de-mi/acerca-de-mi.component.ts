@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./acerca-de-mi.component.css']
 })
 export class AcercaDeMiComponent {
-
+token = localStorage.getItem('token')
 }

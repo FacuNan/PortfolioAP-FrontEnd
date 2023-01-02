@@ -1,9 +1,12 @@
 <section class="perfil">
     <div class="capa">
         <figcaption class="perfil__info">
+            
             <div class="perfil__info-img">
                 <h1><img [src]="miPortfolio.img"></h1>
+                <a class="icon__edicion-perfil" *ngIf="token"><i class="fa fa-pen fa-sm" ></i></a>
             </div>
+
             <div class="perfil__info-presentacion">
                 <h1>{{miPortfolio.nombre}} {{miPortfolio.apellido}}<span>&#160;</span> </h1>
             </div>
