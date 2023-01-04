@@ -1,15 +1,16 @@
 <section class="contacto">
     <h2>Contactame</h2>
-    <form  class="formulario" [formGroup]="contactosForm">
+    <form class="formulario" [formGroup]="contactosForm">
         <fieldset>
             <div class="input">
 
                 <label class="input-label" for="nombre">Nombre y apellido</label>
-                <input matInput formControlName="nombre" type="text" id="nombre" class="input input-padron" placeholder="Nombre y Apellido"
-                    data-tipo="nombre">
+                <input matInput formControlName="nombre" type="text" id="nombre" class="input input-padron"
+                    placeholder="Nombre y Apellido" data-tipo="nombre">
 
-                    <mat-error *ngIf="nombre?.errors?.['required'] && nombre?.touched">El campo es obligatorio</mat-error>
-                    <mat-error *ngIf="nombre?.errors?.['max'] && nombre?.touched">El campo debe tener menos de 50 caracteres</mat-error>
+                <mat-error *ngIf="nombre?.errors?.['required'] && nombre?.touched">El campo es obligatorio</mat-error>
+                <mat-error *ngIf="nombre?.errors?.['max'] && nombre?.touched">El campo debe tener menos de 50
+                    caracteres</mat-error>
                 <span class="input-message-error"></span>
 
 
@@ -17,18 +18,18 @@
 
             <div class="input">
                 <label for="email">Email</label>
-                <input matInput formControlName="email" type="email" id="email" class="input input-padron" placeholder="Email" 
-                    data-tipo="email">
-                    <mat-error *ngIf="email?.errors?.['required'] && email?.touched">El campo es obligatorio</mat-error>
-                    <mat-error *ngIf="email?.errors?.['email'] && email?.touched">El formato no es valido</mat-error>
+                <input matInput formControlName="email" type="email" id="email" class="input input-padron"
+                    placeholder="Email" data-tipo="email">
+                <mat-error *ngIf="email?.errors?.['required'] && email?.touched">El campo es obligatorio</mat-error>
+                <mat-error *ngIf="email?.errors?.['email'] && email?.touched">El formato no es valido</mat-error>
                 <span class="input-message-error"></span>
             </div>
 
             <div class="input">
                 <label for="asunto">Asunto</label>
-                <input maxInput formControlName="asunto"type="telefono" id="asunto" class=" input input-padron" placeholder="asunto" required
-                    data-tipo="asunto">
-                    <mat-error *ngIf=" asunto?.errors?.['required'] && asunto?.touched">El campo es obligatorio</mat-error>
+                <input maxInput formControlName="asunto" type="telefono" id="asunto" class=" input input-padron"
+                    placeholder="asunto" required data-tipo="asunto">
+                <mat-error *ngIf=" asunto?.errors?.['required'] && asunto?.touched">El campo es obligatorio</mat-error>
                 <span class="input-message-error"></span>
             </div>
 
@@ -37,8 +38,9 @@
                 <label for="mensaje">Mensaje</label>
                 <textarea formControlName="mensaje" id="mensaje" class="input input-padron" placeholder="Mensaje"
                     pattern="[A-Za-z]{4,300}" data-tipo="texto"></textarea>
-                    
-                    <mat-error *ngIf=" mensaje?.errors?.['required'] && mensaje?.touched">El campo es obligatorio</mat-error>
+
+                <mat-error *ngIf=" mensaje?.errors?.['required'] && mensaje?.touched">El campo es
+                    obligatorio</mat-error>
 
 
             </div>
