@@ -23,4 +23,7 @@
     border: 1px black solid;
     margin: 10px;
     height: 100vh;
+    border-radius: 10px;
+    text-align: center;
+    padding:10px;
 }

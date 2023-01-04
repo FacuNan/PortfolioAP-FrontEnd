@@ -1,11 +1,11 @@
 .Experiencia {
     display: flex;
     margin: 30px;
-    border: 2px blue solid;
+    border: 1px black solid;
 }
 
 .anio {
-    background-color: red;
+    background-color: azure;
     width: 30%;
     padding: 20px;
 }
@@ -14,11 +14,14 @@
     color: black;
     width: 70%;
     padding: 20px;
-    background-color: antiquewhite;
+    background-color: azure;
 }
 
 .experiencia {
-    border: 2px red solid;
+    border: 1px black solid;
     margin: 10px;
     height: 100vh;
+    border-radius: 10px;
+    text-align: center;
+    padding:10px;
 }
