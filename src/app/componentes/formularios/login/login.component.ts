@@ -18,6 +18,10 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     let token = localStorage.getItem('token')
 
+    if (token) {
+      this.route.navigate(['home/perfil'])
+     
+    }
     this.loginForm= this.formBuilder.group({
       correo:['',[ Validators.required, Validators.email]],
      clave:['', [Validators.required]]
