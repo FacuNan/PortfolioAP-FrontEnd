@@ -3,11 +3,11 @@
     display: flex;
     margin: 30px;
     border: 1px black solid;
-    border-radius:10px;
+    border-radius: 10px;
 }
 
 .anio {
-    background-color:azure;
+    background-color: azure;
     width: 30%;
     padding: 20px;
 }
@@ -16,14 +16,14 @@
     color: black;
     width: 70%;
     padding: 20px;
-    background-color:azure;
+    background-color: azure;
 }
 
 .educacion {
     border: 1px black solid;
     margin: 10px;
-    height: 100vh;
+    height: calc(100vh - 70px);
     border-radius: 10px;
     text-align: center;
-    padding:10px;
+    padding: 10px;
 }

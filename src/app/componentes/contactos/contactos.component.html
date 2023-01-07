@@ -1,6 +1,7 @@
 <section class="contacto">
-    <h2>Contactame</h2>
+   
     <form class="formulario" [formGroup]="contactosForm">
+        <h2>Contactame</h2>
         <fieldset>
             <div class="input">
 
@@ -44,6 +45,7 @@
 
 
             </div>
+
         </fieldset>
         <input type="submit" value="Enviar" class="btn btn-primary enviar" [disabled]="contactosForm.invalid">
     </form>

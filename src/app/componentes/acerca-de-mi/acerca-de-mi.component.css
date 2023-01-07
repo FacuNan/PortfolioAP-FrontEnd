@@ -8,15 +8,15 @@
 
 .informacion {
     display: flex;
-    flex-direction:column-reverse;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-   
+
 
 }
 
-.informacionP{
-    margin-top:10px;
+.informacionP {
+    margin-top: 10px;
 }
 
 .button {
@@ -36,16 +36,17 @@
 }
 
 .acercade-mi {
-    height: 100vh;
+    height: calc(100vh - 70px);
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: black;
     border-radius: 10px;
     border: 1px solid black;
-    margin: 10px;
+    margin:10px;
+
 
 }
 
@@ -61,9 +62,9 @@
     border: whitesmoke solid;
     padding: 20px;
     width: 80%;
-    height: 50vh;
+    height: 250px;
     background-color: rgba(0, 0, 0, 0.7);
-    border-radius:10px;
+    border-radius: 10px;
     color: white;
 }
 

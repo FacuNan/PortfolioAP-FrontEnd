@@ -20,7 +20,7 @@
 .experiencia {
     border: 1px black solid;
     margin: 10px;
-    height: 100vh;
+    height:calc(100vh - 70px);
     border-radius: 10px;
     text-align: center;
     padding:10px;
