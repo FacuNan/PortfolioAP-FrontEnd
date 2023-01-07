@@ -17,6 +17,8 @@ import { LoginComponent } from './componentes/formularios/login/login.component'
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './modules/material/material.module';
 import { SkillsComponent } from './componentes/skills/skills.component';
+import { RedesSocialesComponent } from './componentes/redes-sociales/redes-sociales.component';
+
 
 
 
@@ -35,6 +37,7 @@ import { SkillsComponent } from './componentes/skills/skills.component';
     HomeComponent,
     LoginComponent,
     SkillsComponent,
+    RedesSocialesComponent,
    
    
     
