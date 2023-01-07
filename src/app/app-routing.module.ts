@@ -9,6 +9,7 @@ import { LoginComponent } from './componentes/formularios/login/login.component'
 import { HomeComponent } from './componentes/home/home.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
+import { SkillsComponent } from './componentes/skills/skills.component';
 
 
 
@@ -42,6 +43,13 @@ const routes: Routes = [
         path: 'proyectos',
         component: ProyectosComponent
       },
+      
+      {
+        path: 'skills',
+        component: SkillsComponent
+
+      },
+
       {
         path: 'contacto',
         component: ContactosComponent
@@ -55,13 +63,13 @@ const routes: Routes = [
       {
         path: 'login',
         component: LoginComponent
-    
+
       }
 
     ]
 
   },
- 
+
 
 ];
 

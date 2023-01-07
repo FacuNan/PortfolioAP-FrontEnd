@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './componentes/formularios/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './modules/material/material.module';
+import { SkillsComponent } from './componentes/skills/skills.component';
 
 
 
@@ -33,6 +34,7 @@ import { MaterialModule } from './modules/material/material.module';
     FooterComponent,
     HomeComponent,
     LoginComponent,
+    SkillsComponent,
    
    
     

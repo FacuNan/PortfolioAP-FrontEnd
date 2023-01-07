@@ -6,9 +6,9 @@
                         src="https://www.concordia.gob.ar/sites/all/themes/programar/images/arg-programa.png" alt=""
                         class="rounded float-start" width="80px"></a>
 
-                     
 
-               
+
+
             </div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -28,19 +28,20 @@
                         <a class="nav-link " routerLink="/home/contacto">Contactos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#">Skills</a>
+                        <a class="nav-link " routerLink="/home/skills">Skills</a>
                     <li class="nav-item">
                         <a class="nav-link " routerLink="/home/proyectos">Proyectos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " routerLink="/home/footer">Footer</a>
                     </li>
-                    <li class="nav-item"> <button class="btn btn-primary" routerLink="/home/login" *ngIf="!token" >Login</button>
+                    <li class="nav-item"> <button class="btn btn-primary" routerLink="/home/login"
+                            *ngIf="!token">Login</button>
 
                     </li>
-                    
+
                     <li><button class="btn btn-danger" *ngIf="token" (click)="logout()">Logout</button></li>
-                
+
                 </ul>
             </div>
         </nav>
