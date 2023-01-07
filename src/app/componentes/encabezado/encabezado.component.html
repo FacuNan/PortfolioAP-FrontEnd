@@ -16,21 +16,21 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" routerLink="/">Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#acercaDe-mi">Acerca de mi </a>
+                        <a class="nav-link" routerLink="/home/biografia">Acerca de mi </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#experiencia">Experiencia</a>
+                        <a class="nav-link" routerLink="/home/experiencia">Experiencia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#educacion">Educacion</a>
+                        <a class="nav-link " routerLink="/home/educacion">Educacion</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="#">Skills</a>
                     <li class="nav-item">
-                        <a class="nav-link " href="#">Proyectos</a>
+                        <a class="nav-link " routerLink="/home/proyectos">Proyectos</a>
                     </li>
                     <li class="nav-item"> <button class="btn btn-primary" routerLink="/login" *ngIf="!token" >Login</button>
 
