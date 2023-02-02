@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './modules/material/material.module';
 import { SkillsComponent } from './componentes/skills/skills.component';
 import { RedesSocialesComponent } from './componentes/redes-sociales/redes-sociales.component';
+import { NgCirclesModule } from './modules/ng-circles/ng-circles.module';
+import { EditarPerfilComponent } from './componentes/formularios/editar-perfil/editar-perfil.component';
 
 
 
@@ -38,6 +40,7 @@ import { RedesSocialesComponent } from './componentes/redes-sociales/redes-socia
     LoginComponent,
     SkillsComponent,
     RedesSocialesComponent,
+    EditarPerfilComponent,
    
    
     
@@ -51,7 +54,8 @@ import { RedesSocialesComponent } from './componentes/redes-sociales/redes-socia
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MaterialModule 
+    MaterialModule,
+    NgCirclesModule 
   
    
   ],

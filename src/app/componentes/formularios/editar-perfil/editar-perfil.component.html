@@ -1,0 +1,51 @@
+<section class="editarPerfil">
+    <mat-card>
+
+        <mat-card-header>
+            <mat-card-title>Editar Perfil</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form action="" class="formulario" [formGroup]="validacionPerfil">
+                <mat-form-field>
+                    <input matInput type="text" formControlName="nombre" placeholder="Nombre">
+                    <mat-error *ngIf="nombre?.errors?.['required'] && nombre?.touched">
+                        El campo no debe estar vacio
+                    </mat-error>
+
+                    <mat-error *ngIf="nombre?.errors?.['maxLength'] && nombre?.touched">
+                        El campo no puede exceder los 50 Caracteres
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input matInput type="text" formControlName="apellido" placeholder="Apellido">
+                    <mat-error *ngIf="apellido?.errors?.['required'] && apellido?.touched">
+                        El campo no debe estar vacio
+                    </mat-error>
+
+                    <mat-error *ngIf="apellido?.errors?.['maxLength'] && apellido?.touched">
+                        El campo no puede exceder los 50 Caracteres
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input matInput type="text" formControlName="img" placeholder="URL de la imagen">
+                    <mat-error *ngIf="img?.errors?.['required'] && img?.touched">
+                        El campo no debe estar vacio
+                    </mat-error>
+                    <mat-error *ngIf="img?.errors?.['maxLength'] && img?.touched">
+                        El link no puede exceder los 300 caracteres
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" formControlName="descripcion" placeholder="Descripcion">
+                    <mat-error *ngIf="descripcion?.errors?.['required'] && descripcion?.touched">
+                        El campo no puede estar vacio
+                    </mat-error>
+                </mat-form-field>
+                <button mat-raised-button  type="submit" [disabled]="validacionPerfil.invalid" color="primary">Enviar</button>
+
+            </form>
+        </mat-card-content>
+    </mat-card>
+</section>

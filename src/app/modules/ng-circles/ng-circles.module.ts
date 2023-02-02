@@ -11,11 +11,11 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
   declarations: [],
   imports: [
     CommonModule,
- 
+    NgCircleProgressModule.forRoot({}) 
   ],
 
   exports:[
-   
+    NgCircleProgressModule
   ]
  
 })
