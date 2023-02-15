@@ -10,7 +10,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class PerfilComponent implements OnInit {
   persona: Persona = new Persona(" ", " ", " ");
-  token = localStorage.getItem('token')
+  token = sessionStorage.getItem('token')
 
   miPortfolio: any;
 

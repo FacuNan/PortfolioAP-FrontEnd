@@ -9,7 +9,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class EncabezadoComponent implements OnInit{
   miPortfolio: any;
-  token = localStorage.getItem('token')
+  token = sessionStorage.getItem('token')
 constructor (private route: Router) {}
 ngOnInit(): void{
 
@@ -17,7 +17,7 @@ ngOnInit(): void{
 }
 
 logout(){
-  localStorage.removeItem('token')
+  sessionStorage.removeItem('token')
   this.route.navigate(['/home/login'])
 }
 }
