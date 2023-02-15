@@ -1,26 +1,30 @@
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { Token } from '@angular/compiler';
+import { HtmlParser, Token } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { JwtDto } from '../model/jwt-dto';
+import { LoginUsuario } from '../model/login-usuario';
+import { NuevoUsuario } from '../model/nuevo-usuario';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  url = 'https://reqres.in/api/login';
+
+
+  url = 'http://localhost:8080/auth';
 
 
   constructor(private http: HttpClient, private router: Router) { }
 
-  login(email: string, password: string):Observable<any>{
+  public login(loginUsuario: LoginUsuario): Observable<JwtDto> {
+    return this.http.post<JwtDto>(this.url + 'login', loginUsuario)
+  }
 
-    let body = {
-      email: email,
-      password: password
-    }
-    return this.http.post(this.url, body)
-   
+
+  public nuevo(nuevoUsuario: NuevoUsuario): Observable<any> {
+    return this.http.post<any>(this.url + 'nuevo', nuevoUsuario)
 
   }
 }
