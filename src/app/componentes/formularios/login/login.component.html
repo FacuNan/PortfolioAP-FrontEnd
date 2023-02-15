@@ -32,8 +32,8 @@
         <form #f="ngForm" (ngSubmit)="onLogin()" [formGroup]="loginForm" novalidate>
           <!-- Email input -->
             <div class="form-outline mb-4">
-
-              <input matInput formControlName="correo" [(ngModel)]="nombreUsuario" id="nombreUsuario" name="nombreUsuario"
+              <label for="nombreUsuario" class="for-label">Usuario</label>
+              <input matInput formControlName="correo" [(ngModel)]="nombreUsuario" id="nombreUsuario" name="nombreUsuario" for="nombreUsuario"
                 class="form-control form-control-lg" placeholder="Enter a valid email address" />
               <mat-error *ngIf="emails?.errors?.['required'] && emails?.touched">El campo es obligatorio</mat-error>
               <mat-error *ngIf="emails?.errors?.['email'] && emails?.touched">El formato no es valido</mat-error>
@@ -41,7 +41,7 @@
 
           <!-- Password input -->
           <div class="form-outline mb-3">
-           
+           <label for="clave" class="for-label">Contraseña</label>
               <input [(ngModel)]="clave" matInput formControlName="clave" type="password" id="clave"
                 class="form-control form-control-lg" placeholder="Enter password" />
                 <mat-error *ngIf="passwords?.errors?.['required'] && passwords?.touched">El campo es obligatorio</mat-error>

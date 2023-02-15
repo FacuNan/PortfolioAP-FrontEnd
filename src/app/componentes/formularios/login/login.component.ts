@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
       this.roles = this.tokenService.getAuthorities();
     }
 
-    let token = localStorage.getItem('token')
+    let token = sessionStorage.getItem('token')
 
     if (token) {
       this.router.navigate(['home/perfil'])
@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
 
 
   onLogin(): void{
-    this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password); 
+    this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.clave); 
     this.authService.login(this.loginUsuario).subscribe(data =>{
         this.isLogged = true;
         this.isLogginFail = false;
@@ -63,7 +63,7 @@ export class LoginComponent implements OnInit {
         this.tokenService.SetUserName(this.nombreUsuario);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
-        this.router.navigate([''])
+        this.router.navigate(['home/perfil'])
       }, err =>{
         this.isLogged = false;
         this.isLogginFail = true;
