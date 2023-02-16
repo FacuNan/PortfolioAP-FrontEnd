@@ -36,11 +36,11 @@
                         <a class="nav-link " routerLink="/home/footer">Footer</a>
                     </li>
                     <li class="nav-item"> <button class="btn btn-primary" routerLink="/home/login"
-                            *ngIf="!token">Login</button>
+                            *ngIf="!isLogged">Login</button>
 
                     </li>
 
-                    <li><button class="btn btn-danger" *ngIf="token" (click)="logout()">Logout</button></li>
+                    <li><button class="btn btn-danger" *ngIf="isLogged" (click)="logout()">Logout</button></li>
 
                 </ul>
             </div>

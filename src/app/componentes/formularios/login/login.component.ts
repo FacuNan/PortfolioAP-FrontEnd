@@ -13,8 +13,7 @@ import { TokenService } from 'src/app/servicios/token.service';
 })
 
 export class LoginComponent implements OnInit {
-  email: string = '';
-  password: string = '';
+ 
   loginForm: FormGroup = new FormGroup({});
 
 
