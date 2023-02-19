@@ -1,19 +1,41 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { Experiencia } from 'src/app/model/experiencia';
+
+import { ExperienciaServiceService } from 'src/app/servicios/experiencia-service.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-experiencia',
   templateUrl: './experiencia.component.html',
   styleUrls: ['./experiencia.component.css']
 })
-export class ExperienciaComponent implements OnInit{
-  experienciaService:any;
-constructor(private serviceExperiencia: PortfolioService){}
+export class ExperienciaComponent implements OnInit {
+
+  experiencia: Experiencia[] = [];
+  isLogged = false;
+
+  constructor(private serviceExperiencia: ExperienciaServiceService, private tokenService: TokenService) { }
+
+
   ngOnInit(): void {
-    this.serviceExperiencia.obtenerDatos().subscribe(data =>{
-     this.experienciaService = data.experiencia;
-    })
-    
+
+    this.cargarExperiencia();
+
+    if (this.tokenService.getToken()) {
+      this.isLogged = true
+    } else {
+      this.isLogged = false
+    }
+
+
+  }
+
+  cargarExperiencia(): void {
+    this.serviceExperiencia.lista().subscribe(
+      data => (this.experiencia = data))
+
   }
 
 }
+
+

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Educacion } from 'src/app/model/educacion';
+import { EducacionServiceService } from 'src/app/servicios/educacion-service.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-educacion',
@@ -7,14 +10,27 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-educacionList:any;
-constructor(private datosPortfolio: PortfolioService){}
+  educacion: Educacion[] = [];
 
-ngOnInit():void{
-this.datosPortfolio.obtenerDatos().subscribe(data => 
-  this.educacionList = data.educacion);
+  isLogged = false;
+
+  constructor(private educacionService: EducacionServiceService, private tokenService: TokenService) { }
+
+  ngOnInit(): void {
+    this.cargarEducacion();
+
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false
+    }
 
 
-}
-  
+  }
+  cargarEducacion(): void {
+    this.educacionService.lista().subscribe(data => {
+      this.educacion = data;
+    })
+  }
+
 }
