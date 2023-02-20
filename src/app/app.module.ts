@@ -20,6 +20,10 @@ import { SkillsComponent } from './componentes/skills/skills.component';
 import { RedesSocialesComponent } from './componentes/redes-sociales/redes-sociales.component';
 import { NgCirclesModule } from './modules/ng-circles/ng-circles.module';
 import { EditarPerfilComponent } from './componentes/formularios/editar-perfil/editar-perfil.component';
+import { NewExperienciaComponent } from './componentes/formularios/FormulariosExperiencia/new-experiencia/new-experiencia.component';
+import { NewEducacionComponent } from './componentes/formularios/FormulariosEducacion/new-educacion/new-educacion.component';
+import { NewSkillsComponent } from './componentes/formularios/FormulariosSkills/new-skills/new-skills.component';
+import { NewProyectosComponent } from './componentes/formularios/FormulariosProyecto/new-proyectos/new-proyectos.component';
 
 
 
@@ -41,6 +45,10 @@ import { EditarPerfilComponent } from './componentes/formularios/editar-perfil/e
     SkillsComponent,
     RedesSocialesComponent,
     EditarPerfilComponent,
+    NewExperienciaComponent,
+    NewEducacionComponent,
+    NewSkillsComponent,
+    NewProyectosComponent,
    
    
     

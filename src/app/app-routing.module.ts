@@ -6,6 +6,8 @@ import { EducacionComponent } from './componentes/educacion/educacion.component'
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { EditarPerfilComponent } from './componentes/formularios/editar-perfil/editar-perfil.component';
+import { NewEducacionComponent } from './componentes/formularios/FormulariosEducacion/new-educacion/new-educacion.component';
+import { NewExperienciaComponent } from './componentes/formularios/FormulariosExperiencia/new-experiencia/new-experiencia.component';
 import { LoginComponent } from './componentes/formularios/login/login.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
@@ -66,17 +68,26 @@ const routes: Routes = [
 
       {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
+        canActivate: [AuthGuard]
 
       },
 
       {
         path: 'editarPerfil',
         component: EditarPerfilComponent,
-        canActivate: [AuthGuard]
-    
-      }
 
+
+      },
+      {
+        path: 'nuevaExperiencia',
+        component: NewExperienciaComponent,
+
+      },
+      {
+        path: 'nuevaEducacion',
+        component: NewEducacionComponent
+      }
 
 
     ]
