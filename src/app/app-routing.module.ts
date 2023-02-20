@@ -76,17 +76,20 @@ const routes: Routes = [
       {
         path: 'editarPerfil',
         component: EditarPerfilComponent,
+        canActivate: [AuthGuard]
 
 
       },
       {
         path: 'nuevaExperiencia',
         component: NewExperienciaComponent,
+        canActivate: [AuthGuard]
 
       },
       {
         path: 'nuevaEducacion',
-        component: NewEducacionComponent
+        component: NewEducacionComponent,
+        canActivate:[AuthGuard]
       }
 
 
