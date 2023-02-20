@@ -10,7 +10,7 @@ import { TokenService } from 'src/app/servicios/token.service';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
-  persona: Persona = new Persona(" ", " ", " ");
+  persona: Persona = new Persona(" ", " ", " ", " ");
   isLogged = false;
   token = sessionStorage.getItem('token')
 

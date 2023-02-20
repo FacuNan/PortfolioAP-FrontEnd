@@ -2,14 +2,14 @@
     <div class="tituloPrincipal">
       <h1>Educacion</h1>
     </div>
-    <div class="Educacion" id="educacion" *ngFor=" let educacion of educacionList">
+    <div class="Educacion" id="educacion" *ngFor=" let educacion of educacion">
 
       <div class="anio">
-        <h2>{{educacion.anioInicio}}-{{educacion.anioTerminacion}}</h2>
+        <h2>{{educacion.fechaInicio}}-{{educacion.fechaTerminacion}}</h2>
         <h3>{{educacion.titulo}}</h3>
       </div>
       <div class="detalles">
-        <h2>{{educacion.formacion}}</h2>
+        <h2>{{educacion.descripcion}}</h2>
 
 
       </div>

@@ -1,17 +1,17 @@
 <div class="experiencia" id="experiencia">
-    <div class="tituloPrincipal">
-      <h1>Experiencia Laboral</h1>
+  <div class="tituloPrincipal">
+    <h1>Experiencia Laboral</h1>
+  </div>
+  <div class="Experiencia" id="experiencia" *ngFor="let experiencia of experiencia">
+
+    <div class="anio">
+      <h2>{{experiencia.fechaInicio}}-{{experiencia.fechaTerminacion}}</h2>
+      <h3>{{experiencia.descripcion}}</h3>
     </div>
-    <div class="Experiencia" id="experiencia"*ngFor="let experiencia of experienciaService">
-
-      <div class="anio">
-        <h2>2018-2022</h2>
-        <h3>{{experiencia.descripcion}}</h3>
-      </div>
-      <div class="detalles">
-        <h2>{{experiencia.titulo}}</h2>
+    <div class="detalles">
+      <h2>{{experiencia.nombreE}}</h2>
 
 
-      </div>
     </div>
   </div>
+</div>
