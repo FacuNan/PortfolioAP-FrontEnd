@@ -3,6 +3,7 @@
     text-align: center;
     height: calc(100vh - 70px);
     border: black solid 1px;
+   
   
 
 }
@@ -20,20 +21,34 @@
     flex-wrap: wrap;
     justify-content: center;
     margin:10px;
+   
 
 }
 
 .proyecto {
     border: 1px black solid;
-    background-color: aliceblue;
+    background-color: rgb(102, 124, 143);
     color: black;
     width: 250px;
     height: 220px;
     text-align: center;
     margin: 5px;
-    padding: 20px;
+    padding:5px 0px 10px;
+    position: relative;
 }
 
 .proyecto img {
     width: 80%;
+}
+
+/**iconos de edicion de proyecto**/
+
+.edicion_proyecto{
+
+    position:absolute;
+    
+}
+
+.bi-pencil-fill{
+    color:blue;
 }
