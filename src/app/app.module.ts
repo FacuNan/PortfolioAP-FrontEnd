@@ -24,6 +24,8 @@ import { NewExperienciaComponent } from './componentes/formularios/FormulariosEx
 import { NewEducacionComponent } from './componentes/formularios/FormulariosEducacion/new-educacion/new-educacion.component';
 import { NewSkillsComponent } from './componentes/formularios/FormulariosSkills/new-skills/new-skills.component';
 import { NewProyectosComponent } from './componentes/formularios/FormulariosProyecto/new-proyectos/new-proyectos.component';
+import { EditarExperienciaComponent } from './componentes/formularios/FormulariosExperiencia/editar-experiencia/editar-experiencia.component';
+import { EditarEducacionComponent } from './componentes/formularios/FormulariosEducacion/editar-educacion/editar-educacion.component';
 
 
 
@@ -49,6 +51,8 @@ import { NewProyectosComponent } from './componentes/formularios/FormulariosProy
     NewEducacionComponent,
     NewSkillsComponent,
     NewProyectosComponent,
+    EditarExperienciaComponent,
+    EditarEducacionComponent,
    
    
     

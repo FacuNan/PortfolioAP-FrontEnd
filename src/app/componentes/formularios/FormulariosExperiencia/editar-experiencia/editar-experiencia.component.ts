@@ -28,6 +28,7 @@ export class EditarExperienciaComponent implements OnInit {
     const id = this.activateRouter.snapshot.params['id'];
     this.Sexperiencia.update(id, this.explab).subscribe(
       data => {
+        alert('La experiencia fue modificada con exito')
         this.router.navigate(['']);
       }, err =>{
          alert("Error al modificar experiencia");

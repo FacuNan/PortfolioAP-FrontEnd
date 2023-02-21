@@ -6,7 +6,9 @@ import { EducacionComponent } from './componentes/educacion/educacion.component'
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { EditarPerfilComponent } from './componentes/formularios/editar-perfil/editar-perfil.component';
+import { EditarEducacionComponent } from './componentes/formularios/FormulariosEducacion/editar-educacion/editar-educacion.component';
 import { NewEducacionComponent } from './componentes/formularios/FormulariosEducacion/new-educacion/new-educacion.component';
+import { EditarExperienciaComponent } from './componentes/formularios/FormulariosExperiencia/editar-experiencia/editar-experiencia.component';
 import { NewExperienciaComponent } from './componentes/formularios/FormulariosExperiencia/new-experiencia/new-experiencia.component';
 import { NewProyectosComponent } from './componentes/formularios/FormulariosProyecto/new-proyectos/new-proyectos.component';
 import { LoginComponent } from './componentes/formularios/login/login.component';
@@ -98,7 +100,17 @@ const routes: Routes = [
         path: 'nuevoProyecto',
         component: NewProyectosComponent,
         canActivate: [AuthGuard]
+      },
+      {
+        path:'actualizarExperiencia/:id',
+        component: EditarExperienciaComponent,
+        canActivate:[AuthGuard]
+      },
+      {
+        path:'actualizarEducacion/:id',
+        component: EditarEducacionComponent
       }
+    
 
     ]
 

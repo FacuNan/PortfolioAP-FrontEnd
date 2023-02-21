@@ -1,0 +1,28 @@
+<section class="actualizarEducacion">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Actualizar educacion</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form (ngSubmit)="onUpdate()" class="formulario" novalidate #f="ngForm">
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Nombre de la educacion" name="titulo" id="titulo" [(ngModel)]="edu.titulo">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="institucion" name="institucion" id="institucion" [(ngModel)]="edu.institucion">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="descripcion" name="descripcion" [(ngModel)]="edu.descripcion">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput="text" placeholder="Fecha de inicio" name="fechaInicio" [(ngModel)]="edu.fechaInicio">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Fecha de terminacion" name="fechaTerminacion"
+                        id="fechaTerminacion" [(ngModel)]="edu.fechaTerminacion">
+                </mat-form-field>
+                <button mat-raised-button type="submit" color="primary">Enviar</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</section>
