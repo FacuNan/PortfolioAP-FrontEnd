@@ -10,11 +10,11 @@ import { TokenService } from 'src/app/servicios/token.service';
   styleUrls: ['./new-experiencia.component.css']
 })
 export class NewExperienciaComponent implements OnInit{
-  nombreE= ' ';
-institucion= ' ';
-descripcion=' ';
-fechaInicio = ' ';
-fechaTerminacion = ' ';
+  nombreE= '';
+institucion= '';
+descripcion='';
+fechaInicio = '';
+fechaTerminacion = '';
 
 isLogged = false;
 
@@ -34,11 +34,11 @@ const exp= new Experiencia(this.nombreE, this.institucion, this.descripcion, thi
   
 this.sExperiencia.save(exp).subscribe(data => {
   alert('Experiencia añadida')
-  this.router.navigate(['home/perfil'])
+  this.router.navigate(['home/experiencia'])
 
 }, err=>{
   alert('No se ha podido agregar la experiencia')
-  this.router.navigate(['home/perfil'])
+  this.router.navigate(['home/experiencia'])
 })
 }
 

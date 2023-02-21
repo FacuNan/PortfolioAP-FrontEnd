@@ -8,6 +8,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { EditarPerfilComponent } from './componentes/formularios/editar-perfil/editar-perfil.component';
 import { NewEducacionComponent } from './componentes/formularios/FormulariosEducacion/new-educacion/new-educacion.component';
 import { NewExperienciaComponent } from './componentes/formularios/FormulariosExperiencia/new-experiencia/new-experiencia.component';
+import { NewProyectosComponent } from './componentes/formularios/FormulariosProyecto/new-proyectos/new-proyectos.component';
 import { LoginComponent } from './componentes/formularios/login/login.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
@@ -69,7 +70,7 @@ const routes: Routes = [
       {
         path: 'login',
         component: LoginComponent,
-        canActivate: [AuthGuard]
+
 
       },
 
@@ -79,19 +80,25 @@ const routes: Routes = [
         canActivate: [AuthGuard]
 
 
+
       },
       {
         path: 'nuevaExperiencia',
         component: NewExperienciaComponent,
         canActivate: [AuthGuard]
 
+
       },
       {
         path: 'nuevaEducacion',
         component: NewEducacionComponent,
-        canActivate:[AuthGuard]
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'nuevoProyecto',
+        component: NewProyectosComponent,
+        canActivate: [AuthGuard]
       }
-
 
     ]
 

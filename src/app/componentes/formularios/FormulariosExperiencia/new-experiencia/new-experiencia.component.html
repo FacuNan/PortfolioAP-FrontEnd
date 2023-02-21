@@ -5,27 +5,29 @@
         </mat-card-header>
     
     <mat-card-content>
-        <form action="" class="formulario">
+        <form (ngSubmit)="agregarExperiencia()" novalidate #f="ngForm" class="formulario">
         <mat-form-field>
-            <input matInput formControlName="nombreE" type="text" placeholder="Nombre de la experiencia (Puesto)">
+            <input matInput [(ngModel)]="nombreE"  name="nombreE" id="nombreE" type="text" placeholder="Nombre de la experiencia (Puesto)">
           
         </mat-form-field>
 
         <mat-form-field>
-            <input type="text" matInput formControlname="institucion" placeholder="Nombre de la empresa">
+            <input type="text" matInput [(ngModel)]="institucion" name="institucion" id="institucion" placeholder="Nombre de la empresa">
         </mat-form-field>
 
         <mat-form-field>
-            <input type="text" matInput formControlname="descripcion" placeholder="Descripcion de las tareas">
+            <input type="text" matInput [(ngModel)]="descripcion" name="descripcion" id="descripcion" placeholder="Descripcion de las tareas">
         </mat-form-field>
 
         <mat-form-field>
-            <input type="text" matInput formControlname="fechaInicio" placeholder="Fecha de inicio">
+            <input type="text" matInput [(ngModel)]="fechaInicio" name="fechaInicio" id="fechaInicio" placeholder="Fecha de inicio">
         </mat-form-field>
 
         <mat-form-field>
-            <input type="text" matInput formControlname="fechaTerminacion" placeholder="Fecha de terminacion">
+            <input type="text" matInput [(ngModel)]="fechaTerminacion" name="fechaTermiancion"  id="fechaTerminacion" placeholder="Fecha de terminacion">
         </mat-form-field>
+
+        <button mat-raised-button  type="submit" color="primary">Enviar</button>
     </form>
     </mat-card-content>
 </mat-card>

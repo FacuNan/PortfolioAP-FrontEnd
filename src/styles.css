@@ -53,3 +53,19 @@ mat-card-content{
     width: 80%;
 }
 
+/*Icono de edicion del formulario*/
+.icon__edicion{
+    width: 100%;
+    display:flex;
+    justify-content: end;
+ }
+
+ .bi-trash3{
+    cursor: pointer;
+    margin-left:10px;
+    color:red;
+ }
+
+ .bi-pencil-fill{
+    cursor:pointer;
+ }
