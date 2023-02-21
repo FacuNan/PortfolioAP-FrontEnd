@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Proyectos } from 'src/app/model/proyectos';
 import { ProyectosServiceService } from 'src/app/servicios/proyectos-service.service';
 import { TokenService } from 'src/app/servicios/token.service';
@@ -10,12 +11,12 @@ import { TokenService } from 'src/app/servicios/token.service';
 })
 export class NewProyectosComponent implements OnInit {
 
-  nombreP = ' ';
-  img = ' ';
-  descripcion = ' ';
+  nombreP = '';
+  img = '';
+  descripcion = '';
   isLogged = false;
 
-  constructor(private tokenService: TokenService, private sProyectos: ProyectosServiceService) { }
+  constructor(private tokenService: TokenService, private sProyectos: ProyectosServiceService, private router: Router) { }
   ngOnInit(): void {
     if (this.tokenService.getToken()) {
       this.isLogged = true;
@@ -29,8 +30,10 @@ export class NewProyectosComponent implements OnInit {
 
     this.sProyectos.save(proyect).subscribe(data => {
       alert('el proyecto se agrego correctamente')
+      this.router.navigate(['/home/proyectos'])
     }, err => {
       alert('El proyecto no se pudo agregar');
+      this.router.navigate(['/home/proyectos'])
     })
   }
 
