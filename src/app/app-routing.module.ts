@@ -121,11 +121,13 @@ const routes: Routes = [
       },
       {
         path:'nuevoSkills',
-        component: NewSkillsComponent
+        component: NewSkillsComponent,
+        canActivate:[AuthGuard]
       },
       {
         path:'actualizarSkill/:id',
-        component: EditSkillsComponent
+        component: EditSkillsComponent,
+        canActivate:[AuthGuard]
       }
 
 
