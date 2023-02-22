@@ -114,7 +114,8 @@ const routes: Routes = [
       },
       {
         path: 'actualizarProyecto/:id',
-        component: EditarProyectoComponent
+        component: EditarProyectoComponent,
+        canActivate:[AuthGuard]
       }
 
 
