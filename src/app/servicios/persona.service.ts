@@ -18,4 +18,12 @@ url = 'http://localhost:8080/personas/'
       return this.http.get<Persona>(this.url + 'traer/perfil');
     }
 
+    public detail(id: number):Observable<Persona>{
+      return this.http.get<Persona>(this.url + `detail/${id}`)
+    }
+
+    public update(id: number, persona: Persona):Observable<any>{
+      return this.http.put<any>(this.url + `update/${id}`, persona)
+    }
+
 }

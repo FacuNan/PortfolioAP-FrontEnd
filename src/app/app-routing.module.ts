@@ -78,7 +78,7 @@ const routes: Routes = [
       },
 
       {
-        path: 'editarPerfil',
+        path: 'editarPerfil/:id',
         component: EditarPerfilComponent,
         canActivate: [AuthGuard]
 
