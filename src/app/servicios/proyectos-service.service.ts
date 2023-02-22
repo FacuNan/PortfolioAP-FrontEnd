@@ -27,4 +27,7 @@ export class ProyectosServiceService {
   public update(id:number, proyectos: Proyectos):Observable<any>{
     return this.httpClient.put<any>(this.proyectoUrl + `update/${id}`, proyectos);
   }
+  public delete(id: number):Observable<any>{
+    return this.httpClient.delete<any>(this.proyectoUrl + `delete/${id}`)
+  }
 }

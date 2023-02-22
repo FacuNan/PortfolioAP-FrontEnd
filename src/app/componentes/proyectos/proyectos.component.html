@@ -6,7 +6,7 @@
         <div class="proyecto" *ngFor="let proyecto of proyectos">
             <div class="icon__edicion edicion_proyecto" *ngIf="isLogged">
                 <i class="bi bi-pencil-fill" *ngIf="isLogged" routerLink="/home/actualizarProyecto/{{proyecto.id}}"></i>
-                <i class="bi bi-trash3" *ngIf="isLogged"></i>
+                <i class="bi bi-trash3" *ngIf="isLogged" (click)="Delete(proyecto.id)"></i>
             </div>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3tt0PHab2t01p3CGiAo3a2wDhScZThXfUrkb2vA15yEm5VAKKBgmyptr5ne3XGyDw1_8&usqp=CAU"
                 alt="">

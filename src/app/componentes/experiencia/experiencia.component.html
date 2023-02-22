@@ -15,7 +15,7 @@
 
       <div class="icon__edicion" *ngIf="isLogged">
         <i class="bi bi-pencil-fill" *ngIf="isLogged" routerLink="/home/actualizarExperiencia/{{experiencia.id}}"></i>
-        <i class="bi bi-trash3" *ngIf="isLogged"></i>
+        <i class="bi bi-trash3" *ngIf="isLogged" (click)="Delete(experiencia.id)"></i>
       </div>
       <h2>{{experiencia.nombreE}}</h2>
 

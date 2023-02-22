@@ -8,33 +8,42 @@ import { TokenService } from 'src/app/servicios/token.service';
   templateUrl: './proyectos.component.html',
   styleUrls: ['./proyectos.component.css']
 })
-export class ProyectosComponent implements OnInit{
+export class ProyectosComponent implements OnInit {
 
-  proyectos: Proyectos[]=[];
+  proyectos: Proyectos[] = [];
   isLogged = false;
 
-constructor(private sProyectos: ProyectosServiceService, private tokenService: TokenService){}
+  constructor(private sProyectos: ProyectosServiceService, private tokenService: TokenService) { }
 
 
   ngOnInit(): void {
 
-    this.cargarProyectos(); 
-    if(this.tokenService.getToken()){
-      this.isLogged=true;
-    }else{
-      this.isLogged=false;
+    this.cargarProyectos();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
 
     }
 
-    
+
   }
 
-  cargarProyectos():void{
-    this.sProyectos.lista().subscribe(data=>{
-      this.proyectos=data
+  cargarProyectos(): void {
+    this.sProyectos.lista().subscribe(data => {
+      this.proyectos = data
     })
   }
+  Delete(id: number) {
+    if (id != undefined) {
+      this.sProyectos.delete(id).subscribe(data => {
+        this.cargarProyectos();
 
+      }, err => {
+        alert('No se ha podido eliminar el proyecto')
+      })
+    }
+  }
 
 
 }
