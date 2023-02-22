@@ -1,5 +1,16 @@
 .circle{
     width:100%;
-    padding: 30px;
+    padding:30px;
 
+}
+
+.circle-progress{
+    margin:10px;
+}
+
+mat-card-header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

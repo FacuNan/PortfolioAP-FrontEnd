@@ -27,6 +27,7 @@ import { NewProyectosComponent } from './componentes/formularios/FormulariosProy
 import { EditarExperienciaComponent } from './componentes/formularios/FormulariosExperiencia/editar-experiencia/editar-experiencia.component';
 import { EditarEducacionComponent } from './componentes/formularios/FormulariosEducacion/editar-educacion/editar-educacion.component';
 import { EditarProyectoComponent } from './componentes/formularios/FormulariosProyecto/editar-proyecto/editar-proyecto.component';
+import { EditSkillsComponent } from './componentes/formularios/FormulariosSkills/edit-skills/edit-skills.component';
 
 
 
@@ -55,6 +56,7 @@ import { EditarProyectoComponent } from './componentes/formularios/FormulariosPr
     EditarExperienciaComponent,
     EditarEducacionComponent,
     EditarProyectoComponent,
+    EditSkillsComponent,
    
    
     

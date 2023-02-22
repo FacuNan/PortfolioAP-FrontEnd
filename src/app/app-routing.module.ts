@@ -12,6 +12,8 @@ import { EditarExperienciaComponent } from './componentes/formularios/Formulario
 import { NewExperienciaComponent } from './componentes/formularios/FormulariosExperiencia/new-experiencia/new-experiencia.component';
 import { EditarProyectoComponent } from './componentes/formularios/FormulariosProyecto/editar-proyecto/editar-proyecto.component';
 import { NewProyectosComponent } from './componentes/formularios/FormulariosProyecto/new-proyectos/new-proyectos.component';
+import { EditSkillsComponent } from './componentes/formularios/FormulariosSkills/edit-skills/edit-skills.component';
+import { NewSkillsComponent } from './componentes/formularios/FormulariosSkills/new-skills/new-skills.component';
 import { LoginComponent } from './componentes/formularios/login/login.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
@@ -116,6 +118,14 @@ const routes: Routes = [
         path: 'actualizarProyecto/:id',
         component: EditarProyectoComponent,
         canActivate:[AuthGuard]
+      },
+      {
+        path:'nuevoSkills',
+        component: NewSkillsComponent
+      },
+      {
+        path:'actualizarSkill/:id',
+        component: EditSkillsComponent
       }
 
 
