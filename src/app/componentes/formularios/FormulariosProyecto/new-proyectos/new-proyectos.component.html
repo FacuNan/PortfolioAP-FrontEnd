@@ -1,0 +1,26 @@
+<section class="nuevoProyecto">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Agregar Nuevo proyecto</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <form novalidate #f="ngForm" class="formulario" (ngSubmit)="agregarProyecto()">
+                <mat-form-field>
+                    <input matInput name="nombreP" id="nombreP" [(ngModel)]="nombreP" type="text" placeholder="Nombre del proyecto">
+
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input type="text" name="img" id="img" [(ngModel)]="img" matInput  placeholder="Link de la imagen">
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input type="text" name="descripcion" id="descripcion" [(ngModel)]="descripcion" matInput placeholder="Descripcion de las tareas">
+                </mat-form-field>
+
+                <button mat-raised-button type="submit" color="primary">Enviar</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</section>

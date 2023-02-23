@@ -1,0 +1,27 @@
+<section class="editarSkill">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Actualizar Skills</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form novalidate #f="ngForm" class="formulario" (ngSubmit)="onUpdate()">
+                <mat-form-field>
+                    <input type="text" matInput name="nombre" id="nombre"[(ngModel)]="skill.nombre">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" matInput name="porcentaje" id="porcentaje" [(ngModel)]="skill.porcentaje">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" name="radius" id="radius" matInput [(ngModel)]="skill.radius">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" name="colorExterno" id="colorExterno" matInput [(ngModel)]="skill.colorExterno">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" name="colorInterior" id="colorInterior" matInput [(ngModel)]="skill.colorInterno">
+                </mat-form-field>
+                <button mat-raised-button color="primary" type="submit">Enviar</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</section>

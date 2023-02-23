@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Persona } from 'src/app/model/PersonaModel';
+import { PersonaService } from 'src/app/servicios/persona.service';
 
 @Component({
   selector: 'app-editar-perfil',
@@ -9,9 +12,19 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class EditarPerfilComponent implements OnInit {
 
   validacionPerfil: FormGroup = new FormGroup({})
-  constructor(private formBuilder: FormBuilder) { }
+  persona: Persona = null;
+
+  constructor(private personaService: PersonaService, private formBuilder: FormBuilder, private router: Router, private activateRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
+
+    const id = this.activateRouter.snapshot.params['id']
+    this.personaService.detail(id).subscribe(data => {
+      this.persona = data
+    }, err => {
+      alert('La persona no puede ser modificada')
+      this.router.navigate(['/home/perfil'])
+    })
 
     this.validacionPerfil = this.formBuilder.group({
       nombre: ['', Validators.compose([Validators.required, Validators.maxLength(50)])],
@@ -22,6 +35,18 @@ export class EditarPerfilComponent implements OnInit {
     })
 
 
+
+  }
+
+  onUpdate(): void {
+    const id = this.activateRouter.snapshot.params['id'];
+
+    this.personaService.update(id, this.persona).subscribe(data => {
+      alert('Persona actualizada correctamente')
+      this.router.navigate([''])
+    }, err => {
+      alert('No ha sido posible actualizar a la persona')
+    })
 
   }
 
@@ -37,7 +62,7 @@ export class EditarPerfilComponent implements OnInit {
     return this.validacionPerfil.get('img')
   }
 
-  get descripcion(){
+  get descripcion() {
     return this.validacionPerfil.get('descripcion')
   }
 

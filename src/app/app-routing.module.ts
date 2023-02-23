@@ -6,6 +6,14 @@ import { EducacionComponent } from './componentes/educacion/educacion.component'
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { EditarPerfilComponent } from './componentes/formularios/editar-perfil/editar-perfil.component';
+import { EditarEducacionComponent } from './componentes/formularios/FormulariosEducacion/editar-educacion/editar-educacion.component';
+import { NewEducacionComponent } from './componentes/formularios/FormulariosEducacion/new-educacion/new-educacion.component';
+import { EditarExperienciaComponent } from './componentes/formularios/FormulariosExperiencia/editar-experiencia/editar-experiencia.component';
+import { NewExperienciaComponent } from './componentes/formularios/FormulariosExperiencia/new-experiencia/new-experiencia.component';
+import { EditarProyectoComponent } from './componentes/formularios/FormulariosProyecto/editar-proyecto/editar-proyecto.component';
+import { NewProyectosComponent } from './componentes/formularios/FormulariosProyecto/new-proyectos/new-proyectos.component';
+import { EditSkillsComponent } from './componentes/formularios/FormulariosSkills/edit-skills/edit-skills.component';
+import { NewSkillsComponent } from './componentes/formularios/FormulariosSkills/new-skills/new-skills.component';
 import { LoginComponent } from './componentes/formularios/login/login.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
@@ -66,15 +74,60 @@ const routes: Routes = [
 
       {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
+
 
       },
 
       {
-        path: 'editarPerfil',
+        path: 'editarPerfil/:id',
         component: EditarPerfilComponent,
         canActivate: [AuthGuard]
-    
+
+
+
+      },
+      {
+        path: 'nuevaExperiencia',
+        component: NewExperienciaComponent,
+        canActivate: [AuthGuard]
+
+
+      },
+      {
+        path: 'nuevaEducacion',
+        component: NewEducacionComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'nuevoProyecto',
+        component: NewProyectosComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'actualizarExperiencia/:id',
+        component: EditarExperienciaComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'actualizarEducacion/:id',
+        component: EditarEducacionComponent,
+        canActivate:[AuthGuard]
+      },
+      {
+        path: 'actualizarProyecto/:id',
+        component: EditarProyectoComponent,
+        canActivate:[AuthGuard]
+      },
+      {
+        path:'nuevoSkills',
+        component: NewSkillsComponent,
+        canActivate:[AuthGuard]
+      },
+      {
+        path:'actualizarSkill/:id',
+        component: EditSkillsComponent,
+        canActivate:[AuthGuard]
       }
 
 

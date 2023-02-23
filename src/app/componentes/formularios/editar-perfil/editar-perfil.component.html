@@ -5,9 +5,9 @@
             <mat-card-title>Editar Perfil</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <form action="" class="formulario" [formGroup]="validacionPerfil">
+            <form novalidate #f="ngForm" class="formulario" [formGroup]="validacionPerfil" (ngSubmit)="onUpdate()">
                 <mat-form-field>
-                    <input matInput type="text" formControlName="nombre" placeholder="Nombre">
+                    <input matInput name="nombre" id = "nombre" [(ngModel)]= "persona.nombre" type="text" formControlName="nombre" placeholder="Nombre">
                     <mat-error *ngIf="nombre?.errors?.['required'] && nombre?.touched">
                         El campo no debe estar vacio
                     </mat-error>
@@ -18,7 +18,7 @@
                 </mat-form-field>
 
                 <mat-form-field>
-                    <input matInput type="text" formControlName="apellido" placeholder="Apellido">
+                    <input name="apellido" id="apellido" [(ngModel)]="persona.apellido"  matInput type="text" formControlName="apellido" placeholder="Apellido">
                     <mat-error *ngIf="apellido?.errors?.['required'] && apellido?.touched">
                         El campo no debe estar vacio
                     </mat-error>
@@ -29,7 +29,7 @@
                 </mat-form-field>
 
                 <mat-form-field>
-                    <input matInput type="text" formControlName="img" placeholder="URL de la imagen">
+                    <input matInput name="img" id="img" [(ngModel)]="persona.img" type="text" formControlName="img" placeholder="URL de la imagen">
                     <mat-error *ngIf="img?.errors?.['required'] && img?.touched">
                         El campo no debe estar vacio
                     </mat-error>
@@ -38,12 +38,12 @@
                     </mat-error>
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput type="text" formControlName="descripcion" placeholder="Descripcion">
+                    <input matInput type="text" name="biografia" id="biografia" [(ngModel)]="persona.biografia" formControlName="descripcion" placeholder="Descripcion">
                     <mat-error *ngIf="descripcion?.errors?.['required'] && descripcion?.touched">
                         El campo no puede estar vacio
                     </mat-error>
                 </mat-form-field>
-                <button mat-raised-button  type="submit" [disabled]="validacionPerfil.invalid" color="primary">Enviar</button>
+                <button mat-raised-button  type="submit"  color="primary">Enviar</button>
 
             </form>
         </mat-card-content>

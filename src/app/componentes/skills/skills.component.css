@@ -1,5 +1,30 @@
-.circle{
-    width:100%;
-    padding: 30px;
+/**encabezado**/
+mat-card-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
+}
+
+/**contenido**/
+.circle {
+    width: 100%;
+    display: flex;
+    padding: 30px;
+}
+
+.list-circle {
+    border: solid black 1px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+
+
+}
+
+/**iconos de edicion y elimina**/
+.icon__edicion-skill {
+    display: flex;
+    justify-content: flex-end;
 }

@@ -83,6 +83,8 @@
     color:aliceblue;
     text-decoration: none;
 }
+
+
 @keyframes typewriter {
     from {
         width: 0%;

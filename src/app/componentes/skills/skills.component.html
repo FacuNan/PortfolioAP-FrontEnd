@@ -1,23 +1,22 @@
+<mat-card-header>
+  <mat-card-title>Skills</mat-card-title>
+  <button class="btn btn-success" *ngIf="isLogged" routerLink="/home/nuevoSkills"><i
+      class="bi bi-plus-square"></i></button>
+</mat-card-header>
 <div class="circle">
-    <circle-progress
-  [percent]="85"
-  [radius]="100"
-  [outerStrokeWidth]="10"
-  [innerStrokeWidth]="8"
-  [outerStrokeColor]="'#78C000'"
-  [innerStrokeColor]="'#C7E596'"
-  [animation]="true"
-  [animationDuration]="300"
-></circle-progress>
+  <section class="list-circle" *ngFor="let skill of skills">
+    <div class="icon__edicion-skill" *ngIf="isLogged">
+      <i class="bi bi-pencil-fill" *ngIf="isLogged" routerLink="/home/actualizarSkill/{{skill.id}}"></i>
+      <i class="bi bi-trash3" *ngIf="isLogged" (click)="Delete(skill.id)"></i>
+    </div>
+    <h2>{{skill.nombre}}</h2>
+    <circle-progress class="circle-progress" [percent]="skill.porcentaje" [radius]="skill.radius"
+      [outerStrokeWidth]="8" [innerStrokeWidth]="6" [outerStrokeColor]="(skill.colorExterno)"
+      [innerStrokeColor]="(skill.colorInterno)" [animation]="true" [animationDuration]="300">
 
-<circle-progress
-[percent]="85"
-[radius]="100"
-[outerStrokeWidth]="10"
-[innerStrokeWidth]="8"
-[outerStrokeColor]="'#78C000'"
-[innerStrokeColor]="'#C7E596'"
-[animation]="true"
-[animationDuration]="300"
-></circle-progress>
+    </circle-progress>
+
+
+  </section>
+
 </div>

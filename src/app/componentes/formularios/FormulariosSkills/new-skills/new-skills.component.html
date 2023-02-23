@@ -1,0 +1,27 @@
+<section class="nuevoSkills">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Añadir Skills</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form novalidat #f="ngForm" class="formulario"(ngSubmit)=agregarSkills()>
+                <mat-form-field>
+                    <input type="text" name="nombre" id="nombre" matInput  placeholder="Nombre" [(ngModel)]="nombre">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" name="porcentaje" id="porcentaje" matInput placeholder="Porcentaje" [(ngModel)]="porcentaje">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" name="radius" id="radius" matInput placeholder="Borde redondeado" [(ngModel)]="radius">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" name="colorExterno" id="colorExterno" matInput placeholder="Color Externo" matInput [(ngModel)]="colorExterno">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" name="colorInterno" id="colorInterno" matInput placeholder="Color Interno" matInput [(ngModel)]="colorInterno">
+                </mat-form-field>
+                <button mat-raised-button type="submit" color="primary">Enviar</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</section>

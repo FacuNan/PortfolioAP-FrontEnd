@@ -1,0 +1,21 @@
+<section class="EditarProyecto">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Actualizar Proyecto</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form action="" class="formularios" novalidate #f="ngForm" (ngSubmit)="onUpdate()">
+                <mat-form-field>
+                    <input matInput type="text" [(ngModel)]="proyecto.nombreProyecto" name="nombreProyecto" id="nombreProyecto">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" [(ngModel)]="proyecto.img" name="img" id="img">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" [(ngModel)]="proyecto.descripcion" name="descripcion" id="descripcion">
+                </mat-form-field>
+                <button mat-raised-button type="submit" color="primary">Enviar</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</section>
