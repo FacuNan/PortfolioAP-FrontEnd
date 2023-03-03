@@ -18,3 +18,10 @@ header{
     justify-content: end;
 
 }
+
+
+.nav-item:hover{
+    background-color: lightslategray;
+    border: 1px solid white;
+    transition: background .5s ease-in-out;
+}
