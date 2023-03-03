@@ -2,7 +2,7 @@
     <section class="navegador">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="btn-menu">
-                <label for="btn-menu" class="icon-menu"><i class="bi bi-chevron-bar-right"></i></label>
+                <label for="btn-menu" class="icon-menu"><i class="bi bi-list"></i></label>
             </div>
 
             <div class="AP-logo">
@@ -10,7 +10,7 @@
                         src="https://www.concordia.gob.ar/sites/all/themes/programar/images/arg-programa.png" alt=""
                         class="rounded float-start" width="80px"></a>
             </div>
-         
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
@@ -58,17 +58,19 @@
 <div class="container-menu">
     <div class="cont-menu">
         <nav>
-            <a class="nav-link" routerLink="/">Inicio<span class="sr-only">(current)</span></a>
-            <a class="nav-link" routerLink="/home/biografia">Acerca de mi </a>
-            <a class="nav-link" routerLink="/home/experiencia">Experiencia</a>
-            <a class="nav-link " routerLink="/home/educacion">Educacion</a>
-            <a class="nav-link " routerLink="/home/contacto">Contactos</a>
-            <a class="nav-link " routerLink="/home/skills">Skills</a>
-            <a class="nav-link " routerLink="/home/proyectos">Proyectos</a>
-            <a class="nav-link " routerLink="/home/footer">Footer</a>
-            <button class="btn btn-primary" routerLink="/home/login" *ngIf="!isLogged">Login</button>
+            <label class="nav-link icon-toogle" routerLink="/" for="btn-menu">Inicio<span class="sr-only">(current)</span></label>
+            <label class="nav-link" routerLink="/home/biografia" for="btn-menu">Acerca de mi </label>
+            <label class="nav-link" for="btn-menu" routerLink="/home/experiencia">Experiencia</label>
+            <label class="nav-link" for="btn-menu" routerLink="/home/educacion">Educacion</label>
+            <label for="btn-menu"class="nav-link " routerLink="/home/contacto">Contactos</label>
+            <label for="btn-menu" class="nav-link " routerLink="/home/skills">Skills</label>
+            <label for="btn-menu"class="nav-link " routerLink="/home/proyectos">Proyectos</label>
+            <label for="btn-menu"class="nav-link " routerLink="/home/footer">Footer</label>
+            <div class="botones-login">
+                <label for="btn-menu" class="btn btn-primary" routerLink="/home/login" *ngIf="!isLogged">Login</label>
 
-            <button class="btn btn-danger" *ngIf="isLogged" (click)="logout()">Logout</button>
+                <label for="btn-menu" class="btn btn-danger" *ngIf="isLogged" (click)="logout()">Logout</label>
+            </div>
         </nav>
         <label for="btn-menu" class="icon-cerrar"><i class="bi bi-chevron-bar-left"></i></label>
 

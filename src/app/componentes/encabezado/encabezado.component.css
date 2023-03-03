@@ -1,7 +1,7 @@
 /*header*/
 header {
     border-bottom: 1px solid black;
-  
+
 }
 
 /*boton  de navegacion*/
@@ -9,7 +9,7 @@ header {
     float: left;
     line-height: 45px;
     text-align: center;
-    display:none;
+    display: none;
 
 }
 
@@ -24,9 +24,9 @@ header {
     display: none;
 }
 
-#btn-menu:checked ~ .container-menu{
-    opacity:1;
-    visibility:visible;
+#btn-menu:checked~.container-menu {
+    opacity: 1;
+    visibility: visible;
 }
 
 .container-menu {
@@ -37,57 +37,59 @@ header {
     top: 0px;
     left: 0px;
     transition: 500ms ease;
-    opacity:0;
-    visibility:hidden;
-    z-index:2;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
 
 }
 
 .cont-menu {
-   
+
     width: 100%;
     max-width: 250px;
     background-color: #f8f9fa;
     height: 100vh;
     position: relative;
     transition: 500ms ease;
-    z-index:2;
-    transform:translateX(-100%);
-  
-}
-
-#btn-menu:checked ~ .container-menu .cont-menu{
-    opacity:1;
-    visibility:visible;
-    transform:translateX(0%);
-
-}
-.cont-menu nav{
-    transform:translateY(15%);
+    z-index: 2;
+    transform: translateX(-100%);
 
 }
 
-.cont-menu nav a{
-    display:block;
-    text-decoration:none;
-    padding:20px;
-    color:black;
-    border-left:3px black transparent;
+#btn-menu:checked~.container-menu .cont-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0%);
+
+}
+
+.cont-menu nav {
+    transform: translateY(15%);
+
+}
+
+.icon-toogle {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: black;
+    border-left: 3px black transparent;
     transition: all 500ms ease;
 }
 
-.cont-menu nav a:hover{
+
+.cont-menu nav .icon-toogle:hover {
     border-left: 3px black solid;
     background: #1f1f1f;
-    color:whitesmoke;
+    color: whitesmoke;
 }
 
-.cont-menu label{
-    position:absolute;
-    right:10px;
-    top:10px;
-    cursor:pointer;
-    font-size:20px;
+.icon-cerrar {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 20px;
 }
 
 
@@ -121,20 +123,25 @@ nav-item {
     transition: background .5s ease-in-out;
 }
 
+.botones-login {
+    display: flex;
+    justify-content: center;
+}
+
 @media(max-width:1000px) {
     header {
         width: 100%;
-        border: green solid;
+
         flex-direction: row-reverse;
     }
 
     .navbar {
-        border: red solid;
+
         display: flex;
         justify-content: space-between;
     }
 
     .btn-menu {
-        display:block;
+        display: block;
     }
 }
