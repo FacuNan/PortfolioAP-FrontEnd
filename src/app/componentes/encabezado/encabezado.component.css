@@ -18,10 +18,28 @@ header{
     justify-content: end;
 
 }
+nav-item{
+    border-radius:10px;
+    margin-left:5px;
+}
 
 
 .nav-item:hover{
     background-color: lightslategray;
     border: 1px solid white;
     transition: background .5s ease-in-out;
+}
+
+@media(max-width:600px){
+header{
+    width:100%;
+    border:green solid;
+    flex-direction:row-reverse;
+}
+
+.navbar{
+    border:red solid;
+    display:flex;
+    justify-content: end;
+}
 }

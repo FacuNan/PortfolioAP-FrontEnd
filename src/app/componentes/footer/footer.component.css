@@ -36,3 +36,15 @@
     list-style: none;
     justify-content: space-evenly;
 }
+
+@media(max-width:700px){
+    .footer{
+        background-size: cover;
+        background-position: center;
+        padding:20px;
+    }
+
+   .footer .informacion-redesSociales_nav{
+        width:100%;
+    }
+}

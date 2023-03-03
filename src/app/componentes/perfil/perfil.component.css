@@ -119,4 +119,18 @@
     height: calc(100vh - 60px);
     z-index: 1;
 
+
+
+}
+
+@media(max-width:600px){
+    .perfil{
+        background-size:cover;
+        border: red solid;
+        width:100%;
+    }
+
+    .perfil__info-presentacion{
+        width:100%;
+    }
 }
