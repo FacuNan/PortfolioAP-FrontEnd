@@ -1,15 +1,16 @@
 <header>
     <section class="navegador">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="btn-menu">
+                <label for="btn-menu" class="icon-menu"><i class="bi bi-chevron-bar-right"></i></label>
+            </div>
+
             <div class="AP-logo">
                 <a class="navbar-brand" href="./inicio.html"><img
                         src="https://www.concordia.gob.ar/sites/all/themes/programar/images/arg-programa.png" alt=""
                         class="rounded float-start" width="80px"></a>
-
-
-
-
             </div>
+         
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
@@ -40,10 +41,36 @@
 
                     </li>
 
-                    <li class="nav-item"><button class="btn btn-danger" *ngIf="isLogged" (click)="logout()">Logout</button></li>
+                    <li class="nav-item"><button class="btn btn-danger" *ngIf="isLogged"
+                            (click)="logout()">Logout</button></li>
 
                 </ul>
             </div>
         </nav>
+
+
+
+
     </section>
 </header>
+
+<input type="checkbox" id="btn-menu">
+<div class="container-menu">
+    <div class="cont-menu">
+        <nav>
+            <a class="nav-link" routerLink="/">Inicio<span class="sr-only">(current)</span></a>
+            <a class="nav-link" routerLink="/home/biografia">Acerca de mi </a>
+            <a class="nav-link" routerLink="/home/experiencia">Experiencia</a>
+            <a class="nav-link " routerLink="/home/educacion">Educacion</a>
+            <a class="nav-link " routerLink="/home/contacto">Contactos</a>
+            <a class="nav-link " routerLink="/home/skills">Skills</a>
+            <a class="nav-link " routerLink="/home/proyectos">Proyectos</a>
+            <a class="nav-link " routerLink="/home/footer">Footer</a>
+            <button class="btn btn-primary" routerLink="/home/login" *ngIf="!isLogged">Login</button>
+
+            <button class="btn btn-danger" *ngIf="isLogged" (click)="logout()">Logout</button>
+        </nav>
+        <label for="btn-menu" class="icon-cerrar"><i class="bi bi-chevron-bar-left"></i></label>
+
+    </div>
+</div>
