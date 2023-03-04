@@ -126,7 +126,6 @@
 @media(max-width:600px){
     .perfil{
         background-size:cover;
-        border: red solid;
         width:100%;
     }
 
