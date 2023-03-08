@@ -2,30 +2,48 @@
     display: flex;
     margin: 30px;
     border: 1px black solid;
+    box-shadow: 10px 5px 5px black;
 }
 
 .anio {
-    background-color: azure;
+    background-color: gainsboro;
     width: 30%;
     padding: 20px;
+    border: 1px black solid;
+
 }
 
 .detalles {
     color: black;
     width: 70%;
     padding: 10px;
-    background-color: azure;
-    
+    background-color: aliceblue;
+    border: 1px black solid;
+
 }
 
 .experiencia {
     border: 1px black solid;
     margin: 20px;
-    height:calc(100vh - 70px);
+    height: calc(100vh - 70px);
     border-radius: 10px;
     text-align: center;
-    padding:10px;
+    padding: 10px;
 }
 
 /*Boton de editar*/
 
+@media (max-width:500px){
+    .Experiencia{
+        flex-direction: column;
+      
+    }
+    .anio{
+        width:100%;
+
+    }
+    .detalles{
+        width:100%;
+    }
+    
+}
