@@ -5,7 +5,7 @@
   </div>
   <button class="btn btn-success" *ngIf="isLogged" routerLink="/home/nuevaExperiencia"><i
       class="bi bi-plus-square"></i></button>
-  <div class="Experiencia" id="experiencia" *ngFor="let experiencia of experiencia">
+  <div class="Experiencia animate__animated animate__fadeInDown" id="experiencia" *ngFor="let experiencia of experiencia">
 
     <div class="anio">
       <h2>{{experiencia.fechaInicio}}-{{experiencia.fechaTerminacion}}</h2>

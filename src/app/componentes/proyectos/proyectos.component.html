@@ -3,7 +3,7 @@
     <button class="btn btn-success" *ngIf="isLogged" routerLink="/home/nuevoProyecto"><i
             class="bi bi-plus-square"></i></button>
     <div class="proyectos-lista">
-        <div class="proyecto" *ngFor="let proyecto of proyectos">
+        <div class="proyecto animate__animated animate__flipInX" *ngFor="let proyecto of proyectos">
             <div class="icon__edicion edicion_proyecto" *ngIf="isLogged">
                 <i class="bi bi-pencil-fill" *ngIf="isLogged" routerLink="/home/actualizarProyecto/{{proyecto.id}}"></i>
                 <i class="bi bi-trash3" *ngIf="isLogged" (click)="Delete(proyecto.id)"></i>

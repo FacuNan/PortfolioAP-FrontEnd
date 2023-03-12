@@ -3,7 +3,7 @@
       <h1>Educacion</h1>
     </div>
     <button class="btn btn-success" *ngIf="isLogged" routerLink="/home/nuevaEducacion"><i class="bi bi-plus-square"></i></button>
-    <div class="Educacion" id="educacion" *ngFor="let educacion of educacion">
+    <div class="Educacion animate__animated animate__fadeInDown" id="educacion" *ngFor="let educacion of educacion">
 
       <div class="anio">
         <h2>{{educacion.fechaInicio}}-{{educacion.fechaTerminacion}}</h2>
