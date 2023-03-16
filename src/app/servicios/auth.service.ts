@@ -13,7 +13,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
 export class AuthService {
 
 
-  url = 'http://localhost:8080/auth/';
+  url = 'https://portfolioap-mgzz.onrender.com/auth/';
 
 
   constructor(private http: HttpClient, private router: Router) { }

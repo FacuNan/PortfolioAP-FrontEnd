@@ -8,7 +8,7 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class EducacionServiceService {
-edu = "http://localhost:8080/educacion/"
+edu = "https://portfolioap-mgzz.onrender.com/educacion/"
   constructor(private httpclient: HttpClient) { }
 
   public lista():Observable<Educacion[]>{
