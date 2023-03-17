@@ -48,4 +48,15 @@ export class EditarEducacionComponent implements OnInit {
     })
 
   }
+
+  get nombreEducacion(){
+    return this.validacionEducacion.get('nombreEducacion')
+  }
+
+  get institucion(){
+    return this.validacionEducacion.get('institucion')
+  }
+  get descripcion(){
+return this.validacionEducacion.get('descripcion');
+  }
 }
