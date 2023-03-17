@@ -15,10 +15,10 @@
                     <input matInput type="text" placeholder="descripcion" name="descripcion" [(ngModel)]="edu.descripcion">
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput="text" placeholder="Fecha de inicio" name="fechaInicio" [(ngModel)]="edu.fechaInicio">
+                    <input matInput type="date" placeholder="Fecha de inicio" name="fechaInicio" [(ngModel)]="edu.fechaInicio">
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput type="text" placeholder="Fecha de terminacion" name="fechaTerminacion"
+                    <input matInput type="date" placeholder="Fecha de terminacion" name="fechaTerminacion"
                         id="fechaTerminacion" [(ngModel)]="edu.fechaTerminacion">
                 </mat-form-field>
                 <button mat-raised-button type="submit" color="primary">Enviar</button>
