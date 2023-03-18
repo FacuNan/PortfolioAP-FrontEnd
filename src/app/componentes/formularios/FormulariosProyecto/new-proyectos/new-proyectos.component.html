@@ -5,14 +5,16 @@
         </mat-card-header>
 
         <mat-card-content>
-            <form novalidate #f="ngForm" class="formulario" (ngSubmit)="agregarProyecto()">
+            <form novalidate #f="ngForm" class="formulario" (ngSubmit)="agregarProyecto()" [formGroup]="validacionProyectos">
                 <mat-form-field>
-                    <input matInput name="nombreP" id="nombreP" [(ngModel)]="nombreP" type="text" placeholder="Nombre del proyecto">
+                    <input matInput name="nombreP" id="nombreP" [(ngModel)]="nombreP" type="text" placeholder="Nombre del proyecto" formControlName="nombreProyecto">
+
+                   
 
                 </mat-form-field>
 
                 <mat-form-field>
-                    <input type="text" name="img" id="img" [(ngModel)]="img" matInput  placeholder="Link de la imagen">
+                    <input type="text" name="img" id="img" [(ngModel)]="img" matInput  placeholder="Link de la imagen" >
                 </mat-form-field>
 
                 <mat-form-field>
