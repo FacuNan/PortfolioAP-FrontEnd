@@ -1,6 +1,5 @@
 .redes {
     width: 100px;
-    z-index: 1;
     position: absolute;
     height: calc(100vh - 60px);
     display: flex;

@@ -5,21 +5,38 @@
         </mat-card-header>
 
         <mat-card-content>
-            <form (ngSubmit)="agregarExperiencia()" novalidate #f="ngForm" class="formulario">
+            <form (ngSubmit)="agregarExperiencia()" novalidate #f="ngForm" class="formulario"
+                [formGroup]="validacionExperiencia">
                 <mat-form-field>
                     <input matInput [(ngModel)]="nombreE" name="nombreE" id="nombreE" type="text"
-                        placeholder="Nombre de la experiencia (Puesto)">
+                        placeholder="Nombre de la experiencia (Puesto)" formControlName="nombreExperiencia">
+                    <mat-error *ngIf="nombreExperiencia?.errors?.['required'] && nombreExperiencia?.touched">El nombre
+                        de la experiencia es obligatoria</mat-error>
+                    <mat-error *ngIf="nombreExperiencia?.errors?.['maxLength(100)'] && nombreExperiencia?.touched">
+                        El campo no puede exceder los 100 caracteres</mat-error>
+
 
                 </mat-form-field>
 
                 <mat-form-field>
                     <input type="text" matInput [(ngModel)]="institucion" name="institucion" id="institucion"
-                        placeholder="Nombre de la empresa">
+                        placeholder="Nombre de la empresa" formControlName="empresa">
+
+                    <mat-error *ngIf="empresa?.errors?.['required'] && empresa?.touched">El nombre de la empresa es
+                        obligatorio</mat-error>
+                    <mat-error *ngIf="empresa?.errors?.['maxLength(50)'] && empresa?.touched">El campo no pued eexceder
+                        los 50 caracteres
+                    </mat-error>
                 </mat-form-field>
 
                 <mat-form-field>
                     <input type="text" matInput [(ngModel)]="descripcion" name="descripcion" id="descripcion"
-                        placeholder="Descripcion de las tareas">
+                        placeholder="Descripcion de las tareas" formControlName="descripcionExp">
+
+                    <mat-error *ngIf="descripcionExp?.errors?.['required'] && descripcionExp?.touched">La descripcion es
+                        obligatoria</mat-error>
+                    <mat-error *ngIf="descripcionExp?.errors?.['maxLength(200)'] && descripcionExp?.touched">El campo no
+                        puede exceder los 200 caracteres </mat-error>
                 </mat-form-field>
 
                 <mat-form-field>
