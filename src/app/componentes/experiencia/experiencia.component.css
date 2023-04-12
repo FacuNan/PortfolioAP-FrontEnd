@@ -1,8 +1,18 @@
+
+.experiencia {
+    border: 1px black solid;
+    margin: 20px;
+    height: calc(100vh - 70px);
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px;
+}
 .Experiencia {
     display: flex;
     margin: 30px;
     border: 1px black solid;
     box-shadow: 10px 5px 5px black;
+
 }
 
 .anio {
@@ -22,18 +32,10 @@
 
 }
 
-.experiencia {
-    border: 1px black solid;
-    margin: 20px;
-    height: calc(100vh - 70px);
-    border-radius: 10px;
-    text-align: center;
-    padding: 10px;
-}
 
 /*Boton de editar*/
 
-@media (max-width:500px){
+@media (max-width:600px){
     .Experiencia{
         flex-direction: column;
       

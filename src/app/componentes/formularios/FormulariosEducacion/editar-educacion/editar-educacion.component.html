@@ -23,10 +23,10 @@
                     <mat-error *ngIf="descripcion?.errors?.['maxLength(200) && descripcion?.touched']">No se puede exceder los 200 caracteres</mat-error>
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput type="date" placeholder="Fecha de inicio" name="fechaInicio" [(ngModel)]="edu.fechaInicio">
+                    <input matInput type="text" placeholder="Fecha de inicio" name="fechaInicio" [(ngModel)]="edu.fechaInicio">
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput type="date" placeholder="Fecha de terminacion" name="fechaTerminacion"
+                    <input matInput type="text" placeholder="Fecha de terminacion" name="fechaTerminacion"
                         id="fechaTerminacion" [(ngModel)]="edu.fechaTerminacion">
                 </mat-form-field>
                 <button mat-raised-button type="submit" color="primary">Enviar</button>

@@ -1,15 +1,25 @@
 /*Educacion*/
+
+.educacion {
+    border: 1px black solid;
+    margin: 10px;
+    height: calc(100vh - 70px);
+    border-radius: 10px;
+    text-align: center;
+    padding:40px;
+
+}
 .Educacion {
     display: flex;
     margin: 30px;
     border: 1px black solid;
     border-radius: 10px;
     box-shadow: 10px 5px 5px black;
+  
 }
 
 .anio {
     background-color: gainsboro;
-    
     width: 30%;
     padding: 20px;
     border: 1px black solid;
@@ -23,17 +33,9 @@
     border: 1px black solid;
 }
 
-.educacion {
-    border: 1px black solid;
-    margin: 10px;
-    height: calc(100vh - 70px);
-    border-radius: 10px;
-    text-align: center;
-    padding: 10px;
 
-}
 
-@media(max-width:500px){
+@media(max-width:600px){
     .Educacion{
         flex-direction: column;
     }
