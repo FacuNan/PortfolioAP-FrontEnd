@@ -12,7 +12,7 @@ import { EducacionServiceService } from 'src/app/servicios/educacion-service.ser
 export class EditarEducacionComponent implements OnInit {
   edu: Educacion = null;
 
-  validacionEducacion: FormGroup= new FormGroup({});
+  validacionEducacion: FormGroup = new FormGroup({});
 
 
   constructor(private sEducacion: EducacionServiceService, private router: Router, private activateRouter: ActivatedRoute, private formBuilder: FormBuilder) { }
@@ -29,11 +29,12 @@ export class EditarEducacionComponent implements OnInit {
 
     //Validacion de formulario
 
-    this.validacionEducacion= this.formBuilder.group({
-      nombreEducacion:['', Validators.compose([Validators.required, Validators.minLength(100)])],
-      institucion:['', Validators.compose([Validators.required, Validators.maxLength(50)])],
-      descripcion:['',Validators.compose([Validators.required, Validators.maxLength(200)])]
-
+    this.validacionEducacion = this.formBuilder.group({
+      nombreEducacion: ['', Validators.compose([Validators.required, Validators.minLength(100)])],
+      institucion: ['', Validators.compose([Validators.required, Validators.maxLength(50)])],
+      descripcion: ['', Validators.compose([Validators.required, Validators.maxLength(200)])],
+      fechaInicioEdu: ['', Validators.required],
+      fechaTerminacionEdu: ['', Validators.required]
     })
 
   }
@@ -49,14 +50,20 @@ export class EditarEducacionComponent implements OnInit {
 
   }
 
-  get nombreEducacion(){
+  get nombreEducacion() {
     return this.validacionEducacion.get('nombreEducacion')
   }
 
-  get institucion(){
+  get institucion() {
     return this.validacionEducacion.get('institucion')
   }
-  get descripcion(){
-return this.validacionEducacion.get('descripcion');
+  get descripcion() {
+    return this.validacionEducacion.get('descripcion');
+  }
+  get fechaInicioEdu() {
+    return this.validacionEducacion.get('fechaInicioEdu')
+  }
+  get fechaTerminacionEdu() {
+    return this.validacionEducacion.get('fechaTerminacionEdu')
   }
 }

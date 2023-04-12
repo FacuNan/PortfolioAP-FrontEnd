@@ -40,13 +40,15 @@
                 </mat-form-field>
 
                 <mat-form-field>
-                    <input type="text" matInput [(ngModel)]="fechaInicio" name="fechaInicio" id="fechaInicio"
-                        placeholder="Fecha de inicio">
+                    <input type="date" matInput [(ngModel)]="fechaInicio" name="fechaInicio" id="fechaInicio"
+                        placeholder="Fecha de inicio" formControlName="fechaInicioExp">
+                        <mat-error *ngIf="fechaInicioExp?.errors?.['required'] && fechaInicioExp?.touched">El campo no puede estar vacio</mat-error>
                 </mat-form-field>
 
                 <mat-form-field>
-                    <input type="text" matInput [(ngModel)]="fechaTerminacion" name="fechaTermiancion"
-                        id="fechaTerminacion" placeholder="Fecha de terminacion">
+                    <input type="date" matInput [(ngModel)]="fechaTerminacion" name="fechaTerminacion"
+                        id="fechaTerminacion" placeholder="Fecha de terminacion" formControlName="fechaTerminacionExp">
+                        <mat-error *ngIf="fechaTerminacionExp?.errors?.['required'] && fechaTerminacionExp?.touched">El campo no puede estar vacio</mat-error>
                 </mat-form-field>
 
                 <button mat-raised-button type="submit" color="primary">Enviar</button>

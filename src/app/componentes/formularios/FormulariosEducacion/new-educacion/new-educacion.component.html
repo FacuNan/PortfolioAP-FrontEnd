@@ -40,13 +40,17 @@
                 </mat-form-field>
 
                 <mat-form-field>
-                    <input type="text" matInput [(ngModel)]="fechaInicio" name="fechaInicio" id="fechaInicio"
-                        placeholder="Fecha de inicio">
+                    <input type="date" matInput [(ngModel)]="fechaInicio" id="fechaInicio" placeholder="Fecha de inicio"
+                        formControlName="fechaInicioEdu">
+                    <mat-error *ngIf="fechaInicioEdu?.errors?.['required'] && fechaInicioEdu?.touched">El campo es
+                        obligatorio</mat-error>
                 </mat-form-field>
 
                 <mat-form-field>
-                    <input type="text" matInput [(ngModel)]="fechaTerminacion" name="fechaTerminacion"
-                        id="fechaTerminacion" placeholder="Fecha de terminacion">
+                    <input type="date" matInput [(ngModel)]="fechaTerminacion" id="fechaTerminacion"
+                        placeholder="Fecha de terminacion" formControlNanme="fechaTerminacion"
+                        formControlName="fechaTerminacionEdu">
+                        <mat-error *ngIf="fechaTerminacionEdu?.errors?.['required'] && fechaTerminacionEdu?.touched">El campo es obligatorio</mat-error>
                 </mat-form-field>
 
                 <button mat-raised-button type="submit" color="primary">Enviar</button>

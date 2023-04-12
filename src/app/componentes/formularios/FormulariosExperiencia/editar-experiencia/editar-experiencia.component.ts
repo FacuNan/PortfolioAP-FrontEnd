@@ -17,9 +17,9 @@ export class EditarExperienciaComponent implements OnInit {
   ngOnInit(): void {
     const id = this.activateRouter.snapshot.params['id'];
     this.Sexperiencia.detail(id).subscribe(
-      data =>{
+      data => {
         this.explab = data;
-      }, err =>{
+      }, err => {
         alert("Error al modificar experiencia");
         this.router.navigate(['']);
       }
@@ -27,34 +27,44 @@ export class EditarExperienciaComponent implements OnInit {
 
     this.validacionExperiencion = this.formBuilder.group({
       nombreExperiencia: ['', Validators.compose([Validators.required, Validators.maxLength(100)])],
-      empresa:['',Validators.compose([Validators.required, Validators.maxLength(50)])],
-      descripcionExp:['', Validators.compose([Validators.required, Validators.maxLength(200)])]
+      empresa: ['', Validators.compose([Validators.required, Validators.maxLength(50)])],
+      descripcionExp: ['', Validators.compose([Validators.required, Validators.maxLength(200)])],
+      fechaInicioExp: ['', Validators.required],
+      fechaTerminacionExp: ['', Validators.required]
     })
   }
-  
-  onUpdate(): void{
+
+  onUpdate(): void {
     const id = this.activateRouter.snapshot.params['id'];
     this.Sexperiencia.update(id, this.explab).subscribe(
       data => {
         alert('La experiencia fue modificada con exito')
         this.router.navigate(['']);
-      }, err =>{
-         alert("Error al modificar experiencia");
-         this.router.navigate(['']);
+      }, err => {
+        alert("Error al modificar experiencia");
+        this.router.navigate(['']);
       }
     )
   }
 
-  get nombreExperiencia(){
+  get nombreExperiencia() {
     return this.validacionExperiencion.get('nombreExperiencia');
   }
 
-  get empresa(){
+  get empresa() {
     return this.validacionExperiencion.get('empresa')
   }
 
-  get descripcionExp(){
+  get descripcionExp() {
     return this.validacionExperiencion.get('descripcionExp')
+  }
+
+  get fechaInicioExp() {
+    return this.validacionExperiencion.get('fechaInicioExp')
+  }
+
+  get fechaTerminacionExp() {
+    return this.validacionExperiencion.get('fechaTerminacionExp')
   }
 
 }

@@ -32,7 +32,10 @@ export class NewEducacionComponent implements OnInit {
     this.validacionEducacion = this.formBuilder.group({
       nombreEducacion: ['', Validators.compose([Validators.required, Validators.maxLength(100)])],
       institucionEdu:['', Validators.compose([Validators.required, Validators.maxLength(50)])],
-      descripcionEdu:['', Validators.compose([Validators.required, Validators.maxLength(200)])]
+      descripcionEdu:['', Validators.compose([Validators.required, Validators.maxLength(200)])],
+      fechaInicioEdu:['', Validators.required],
+      fechaTerminacionEdu:['', Validators.required]
+
     })
   }
 
@@ -58,5 +61,13 @@ get institucionEdu(){
 
 get descripcionEdu(){
   return this.validacionEducacion.get('descripcionEdu');
+}
+
+get fechaInicioEdu(){
+  return this.validacionEducacion.get('fechaInicioEdu')
+}
+
+get fechaTerminacionEdu(){
+  return this.validacionEducacion.get('fechaTerminacionEdu')
 }
 }

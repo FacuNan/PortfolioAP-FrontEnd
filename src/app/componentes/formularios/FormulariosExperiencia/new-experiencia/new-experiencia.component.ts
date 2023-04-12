@@ -33,6 +33,8 @@ export class NewExperienciaComponent implements OnInit {
       nombreExperiencia: ['', Validators.compose([Validators.required, Validators.maxLength(100)])],
       empresa: ['', Validators.compose([Validators.required, Validators.maxLength(50)])],
       descripcionExp: ['', Validators.compose([Validators.required, Validators.maxLength(200)])],
+      fechaInicioExp: ['', Validators.required],
+      fechaTerminacionExp: ['', Validators.required]
 
     })
 
@@ -62,6 +64,14 @@ export class NewExperienciaComponent implements OnInit {
 
   get descripcionExp() {
     return this.validacionExperiencia.get('descripcionExp')
+  }
+
+  get fechaInicioExp(){
+    return this.validacionExperiencia.get('fechaInicioExp')
+  }
+
+  get fechaTerminacionExp(){
+    return this.validacionExperiencia.get('fechaTerminacionExp')
   }
 
 
