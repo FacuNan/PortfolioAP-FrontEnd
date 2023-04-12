@@ -12,7 +12,9 @@
     <h2>{{skill.nombre}}</h2>
     <circle-progress class="circle-progress" [percent]="skill.porcentaje" [radius]="skill.radius"
       [outerStrokeWidth]="8" [innerStrokeWidth]="6" [outerStrokeColor]="(skill.colorExterno)"
-      [innerStrokeColor]="(skill.colorInterno)" [animation]="true" [animationDuration]="300">
+      [innerStrokeColor]="(skill.colorInterno)" [animation]="true" [animationDuration]="300" 
+      [imageSrc]="skill.imagen" [showImage]="true"  [imageHeight]="60"
+      [imageWidth]="60">
 
     </circle-progress>
 

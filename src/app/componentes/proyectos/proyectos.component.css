@@ -1,54 +1,70 @@
+* {
+    list-style: none;
+    text-decoration: none;
+}
+
 .proyectos {
     width: 100%;
     text-align: center;
     height: calc(100vh - 70px);
     border: black solid 1px;
-   
-  
+
 
 }
 
 .proyectos h1 {
     margin: 5px;
-    width:100%;
-   
+    width: 100%;
+
 }
 
 .proyectos-lista {
-    width:100%;
+    width: 100%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin:10px;
-   
+    margin: 10px;
+
 
 }
 
 .proyecto {
     border: 1px black solid;
-    background-color: rgb(102, 124, 143);
+    background-color: rgba(102, 124, 143, 0.5);
     color: black;
     width: 250px;
     height: 220px;
     text-align: center;
     margin: 5px;
-    padding:5px 0px 10px;
     position: relative;
+    border-radius: 10px;
 }
 
 .proyecto img {
-    width: 80%;
+    width: 90%;
+    border-radius: 10px;
+    margin: 10px 10px;
 }
 
 /**iconos de edicion de proyecto**/
 
-.edicion_proyecto{
+.edicion_proyecto {
 
-    position:absolute;
-    
+    position: absolute;
+    padding: 10px;
+
 }
 
-.bi-pencil-fill{
-    color:blue;
+.info-proyecto a {
+    color: black;
+    font-size: 20px;
+}
+
+@media (max-width:800px) {
+    .proyectos-lista {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }

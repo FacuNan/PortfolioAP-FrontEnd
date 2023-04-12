@@ -14,6 +14,7 @@ export class NewSkillsComponent implements OnInit {
   radius: number;
   colorExterno = '';
   colorInterno = '';
+  imagen='';
 
   constructor(private skillsService: SkillsService, private router: Router) { }
   ngOnInit(): void {
@@ -21,7 +22,7 @@ export class NewSkillsComponent implements OnInit {
   }
 
   agregarSkills(): void {
-    const skills = new Skills(this.nombre, this.porcentaje, this.radius, this.colorExterno, this.colorInterno)
+    const skills = new Skills(this.nombre, this.porcentaje, this.radius, this.colorExterno, this.colorInterno, this.imagen)
 
     this.skillsService.save(skills).subscribe(data => {
       alert('El Skill fue añadido con exito')

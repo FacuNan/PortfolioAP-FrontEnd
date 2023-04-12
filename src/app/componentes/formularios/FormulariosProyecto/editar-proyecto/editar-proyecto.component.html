@@ -30,6 +30,12 @@
 
                     </mat-error>
                 </mat-form-field>
+                <mat-form-field>
+                    <input type="text" name="link" id="link" [(ngModel)]="proyecto.link" matInput formControlName="link" placeholder="url del proyecto">
+                    <mat-error *ngIf="link?.errors?.['required'] && link?.touched">El campo es
+                        obligatorio</mat-error>
+                </mat-form-field>
+
                 <button mat-raised-button type="submit" color="primary">Enviar</button>
             </form>
         </mat-card-content>

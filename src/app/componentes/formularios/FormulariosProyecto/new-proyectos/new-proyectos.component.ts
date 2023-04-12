@@ -17,6 +17,7 @@ export class NewProyectosComponent implements OnInit {
   img = '';
   descripcion = '';
   isLogged = false;
+url ='';
 
   validacionProyectos: FormGroup = new FormGroup({});
 
@@ -37,7 +38,7 @@ export class NewProyectosComponent implements OnInit {
   }
 
   agregarProyecto(): void {
-    const proyect = new Proyectos(this.nombreP, this.img, this.descripcion)
+    const proyect = new Proyectos(this.nombreP, this.img, this.descripcion, this.url)
 
     this.sProyectos.save(proyect).subscribe(data => {
       alert('el proyecto se agrego correctamente')
