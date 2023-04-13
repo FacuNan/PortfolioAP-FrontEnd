@@ -3,33 +3,58 @@
         <mat-card-header>
             <mat-card-title>Agregar Nueva Educacion</mat-card-title>
         </mat-card-header>
-        
-    
-    <mat-card-content>
-        <form (ngSubmit)="agregarEducacion()" class="formulario" novalidate #f="ngForm">
-        <mat-form-field>
-            <input matInput [(ngModel)]="nombreE" name="nombreE" id="nombreE" type="text" placeholder="Nombre de la educacion">
-          
-        </mat-form-field>
 
-        <mat-form-field>
-            <input type="text" matInput [(ngModel)]="institucion" name="institucion" id="institucion" placeholder="Nombre de la empresa">
-        </mat-form-field>
 
-        <mat-form-field>
-            <input type="text" matInput  [(ngModel)]="descripcion" name="descripcion" id="descripcion" placeholder="Descripcion de las tareas">
-        </mat-form-field>
+        <mat-card-content>
+            <form (ngSubmit)="agregarEducacion()" class="formulario" novalidate #f="ngForm"
+                [formGroup]="validacionEducacion">
+                <mat-form-field>
+                    <input matInput [(ngModel)]="nombreE" name="nombreE" id="nombreE" type="text"
+                        placeholder="Nombre de la educacion" formControlName="nombreEducacion">
+                    <mat-error *ngIf="nombreEducacion?.errors?.['required'] && nombreEducacion?.touched">El nombre
+                        de la educacion es obligatoria</mat-error>
+                    <mat-error *ngIf="nombreEducacion?.errors?.['maxLength(100)'] && nombreEducacion?.touched">No puede
+                        exceder los 100 caracteres</mat-error>
+                </mat-form-field>
 
-        <mat-form-field>
-            <input type="text" matInput [(ngModel)]="fechaInicio" name="fechaInicio" id="fechaInicio"  placeholder="Fecha de inicio">
-        </mat-form-field>
+                <mat-form-field>
+                    <input type="text" matInput [(ngModel)]="institucion" name="institucion" id="institucion"
+                        placeholder="Nombre de la empresa" formControlName="institucionEdu">
+                    <mat-error *ngIf="institucionEdu?.errors?.['required'] && institucionEdu?.touched ">El campo es
+                        obligatorio</mat-error>
+                    <mat-error *ngIf="institucionEdu?.errors?.['maxLength(50)'] && institucionEdu?.touched">El campo no
+                        puede exceder los 50 caracteres</mat-error>
 
-        <mat-form-field>
-            <input type="text" matInput [(ngModel)]="fechaTerminacion" name="fechaterminacion" id="fechaTermiancion" placeholder="Fecha de terminacion">
-        </mat-form-field>
+                </mat-form-field>
 
-        <button mat-raised-button  type="submit" color="primary">Enviar</button>
-    </form>
-    </mat-card-content>
-</mat-card>
+
+
+                <mat-form-field>
+                    <input type="text" matInput [(ngModel)]="descripcion" name="descripcion" id="descripcion"
+                        placeholder="Descripcion de las tareas" formControlName="descripcionEdu">
+                    <mat-error *ngIf="descripcionEdu?.errors?.['required'] && descripcionEdu?.touched">El campo es
+                        obligatorio</mat-error>
+                    <mat-error *ngIf="descripcionEdu?.errors?.['maxLength(200)'] &&descripcionEdu?.touched">El campo no
+                        puede exceder los 200 caracteres</mat-error>
+
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input type="date" matInput [(ngModel)]="fechaInicio" id="fechaInicio" placeholder="Fecha de inicio"
+                        formControlName="fechaInicioEdu">
+                    <mat-error *ngIf="fechaInicioEdu?.errors?.['required'] && fechaInicioEdu?.touched">El campo es
+                        obligatorio</mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input type="date" matInput [(ngModel)]="fechaTerminacion" id="fechaTerminacion"
+                        placeholder="Fecha de terminacion" formControlNanme="fechaTerminacion"
+                        formControlName="fechaTerminacionEdu">
+                        <mat-error *ngIf="fechaTerminacionEdu?.errors?.['required'] && fechaTerminacionEdu?.touched">El campo es obligatorio</mat-error>
+                </mat-form-field>
+
+                <button mat-raised-button type="submit" color="primary">Enviar</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
 </section>

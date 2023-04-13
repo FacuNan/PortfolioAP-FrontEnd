@@ -5,30 +5,49 @@
         </mat-card-header>
 
         <mat-card-content>
-            <form novalidate #f="ngForm" class="formulario" (ngSubmit)="onUpdate()">
+            <form novalidate #f="ngForm" class="formulario" (ngSubmit)="onUpdate()"
+                [formGroup]="validacionExperiencion">
                 <mat-form-field>
 
                     <input matInput [(ngModel)]="explab.nombreE" name="nombreE" id="nombreE" type="text"
-                        placeholder="Nombre de la experiencia (Puesto)">
+                        placeholder="Nombre de la experiencia (Puesto)" formControlName="nombreExperiencia">
+                    <mat-error *ngIf="nombreExperiencia?.errors?.['required'] && nombreExperiencia?.touched">El nombre
+                        de la experiencia es obligatoria</mat-error>
+                    <mat-error *ngIf="nombreExperiencia?.errors?.['maxLength(100)'] && nombreExperiencia?.touched">
+                        El campo no puede exceder los 100 caracteres</mat-error>
 
                 </mat-form-field>
 
                 <mat-form-field>
                     <input type="text" matInput placeholder="Nombre de la empresa" name="institucion" id="institucion"
-                        [(ngModel)]="explab.institucion">
+                        [(ngModel)]="explab.institucion" formControlName="empresa">
+                    <mat-error *ngIf="empresa?.errors?.['required'] && empresa?.touched">El nombre de la empresa es
+                        obligatorio</mat-error>
+                    <mat-error *ngIf="empresa?.errors?.['maxLength(50)'] && empresa?.touched">El campo no pued eexceder
+                        los 50 caracteres
+                    </mat-error>
                 </mat-form-field>
 
                 <mat-form-field>
-                    <input type="text" matInput name="descripcion" id="descripcion" [(ngModel)]="explab.descripcion">
+                    <input type="text" matInput name="descripcion" id="descripcion" [(ngModel)]="explab.descripcion"
+                        formControlName="descripcionExp">
+                    <mat-error *ngIf="descripcionExp?.errors?.['required'] && descripcionExp?.touched">La descripcion es
+                        obligatoria</mat-error>
+                    <mat-error *ngIf="descripcionExp?.errors?.['maxLength(200)'] && descripcionExp?.touched">El campo no
+                        puede exceder los 200 caracteres </mat-error>
                 </mat-form-field>
 
                 <mat-form-field>
-                    <input type="text" matInput [(ngModel)]="explab.fechaInicio" name="fechaInicio" id="fechaInicio">
+                    <input type="date" matInput [(ngModel)]="explab.fechaInicio" name="fechaInicio" id="fechaInicio"
+                        formControlName="fechaInicioExp">
+                    <mat-error *ngIf="fechaInicioExp?.errors?.['required'] && fechaInicioExp?.touched">El campo no pued
+                        esta vacio</mat-error>
                 </mat-form-field>
-
                 <mat-form-field>
-                    <input type="text" matInput placeholder="Fecha de terminacion" [(ngModel)]="explab.fechaTerminacion"
-                        name="fechaTerminacion" id="fechaTerminacion">
+                    <input type="date" matInput placeholder="Fecha de terminacion" [(ngModel)]="explab.fechaTerminacion"
+                        name="fechaTerminacion" id="fechaTerminacion" formControlName="fechaTerminacionExp">
+                    <mat-error *ngIf="fechaTerminacionExp?.errors?.['required'] && fechaTerminacionExp?.touched">El
+                        campo no puede estar vacio</mat-error>
                 </mat-form-field>
 
                 <button mat-raised-button type="submit" color="primary">Actualizar </button>

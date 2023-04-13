@@ -5,10 +5,10 @@
   </div>
   <button class="btn btn-success" *ngIf="isLogged" routerLink="/home/nuevaExperiencia"><i
       class="bi bi-plus-square"></i></button>
-  <div class="Experiencia" id="experiencia" *ngFor="let experiencia of experiencia">
+  <div class="Experiencia animate__animated animate__fadeInDown" id="experiencia" *ngFor="let experiencia of experiencia">
 
     <div class="anio">
-      <h2>{{experiencia.fechaInicio}}-{{experiencia.fechaTerminacion}}</h2>
+      <h2>{{experiencia.fechaInicio}}/{{experiencia.fechaTerminacion}}</h2>
       <h3>{{experiencia.nombreE}}</h3>
     </div>
     <div class="detalles">
@@ -17,7 +17,8 @@
         <i class="bi bi-pencil-fill" *ngIf="isLogged" routerLink="/home/actualizarExperiencia/{{experiencia.id}}"></i>
         <i class="bi bi-trash3" *ngIf="isLogged" (click)="Delete(experiencia.id)"></i>
       </div>
-      <h2>{{experiencia.nombreE}}</h2>
+      <h2>{{experiencia.institucion}}</h2>
+      <h2>{{experiencia.descripcion}}</h2>
 
 
     </div>

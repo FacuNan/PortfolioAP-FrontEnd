@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Experiencia } from 'src/app/model/experiencia';
 
 import { ExperienciaServiceService } from 'src/app/servicios/experiencia-service.service';
@@ -14,6 +15,7 @@ export class ExperienciaComponent implements OnInit {
   experiencia: Experiencia[] = [];
   isLogged = false;
 
+
   constructor(private serviceExperiencia: ExperienciaServiceService, private tokenService: TokenService) { }
 
 
@@ -28,13 +30,14 @@ export class ExperienciaComponent implements OnInit {
     }
 
 
+
   }
 
   Delete(id?: number) {
     if (id != undefined)
       this.serviceExperiencia.delete(id).subscribe(data => {
         this.cargarExperiencia();
-      }, err =>{
+      }, err => {
         alert('No se ha podido eliminar la experiencia')
       })
   }
@@ -44,6 +47,8 @@ export class ExperienciaComponent implements OnInit {
       data => (this.experiencia = data))
 
   }
+
+
 
 
 }

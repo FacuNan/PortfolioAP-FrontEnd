@@ -4,16 +4,38 @@
             <mat-card-title>Actualizar Proyecto</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <form action="" class="formularios" novalidate #f="ngForm" (ngSubmit)="onUpdate()">
+            <form action="" class="formularios" novalidate #f="ngForm" (ngSubmit)="onUpdate()"
+                [formGroup]="validacionProyectos">
                 <mat-form-field>
-                    <input matInput type="text" [(ngModel)]="proyecto.nombreProyecto" name="nombreProyecto" id="nombreProyecto">
+                    <input matInput type="text" [(ngModel)]="proyecto.nombreProyecto" name="nombreProyecto"
+                        id="nombreProyecto" formControlName="nombreProyecto">
+                    <mat-error *ngIf="nombreProyecto?.errors?.['required'] && nombreProyecto?.touched">El nombre es
+                        obligatorio</mat-error>
+                    <mat-error *ngIf="nombreProyecto?.errors?.['maxLength(50)']&& nombreProyecto?.touched">El campo no
+                        puede exceder los 50 caracteres</mat-error>
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput type="text" [(ngModel)]="proyecto.img" name="img" id="img">
+                    <input matInput type="text" [(ngModel)]="proyecto.img" name="img" id="img" formControlName="imgPro">
+                    <mat-error *ngIf="imgPro?.errors?.['required'] && imgPro?.touched">La imagen es
+                        obligatoria</mat-error>
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput type="text" [(ngModel)]="proyecto.descripcion" name="descripcion" id="descripcion">
+                    <input matInput type="text" [(ngModel)]="proyecto.descripcion" name="descripcion" id="descripcion"
+                        formControlName="descripcionPro">
+
+                    <mat-error *ngIf="descripcionPro?.errors?.['required'] && descripcionPro?.touched">La descripcion es
+                        obligatoria</mat-error>
+                    <mat-error *ngIf="descripcionPro?.errors?.['maxLength(200)'] && descripcionPro?.touched ">El campo
+                        no puede exceder los 200 caracteres
+
+                    </mat-error>
                 </mat-form-field>
+                <mat-form-field>
+                    <input type="text" name="link" id="link" [(ngModel)]="proyecto.link" matInput formControlName="link" placeholder="url del proyecto">
+                    <mat-error *ngIf="link?.errors?.['required'] && link?.touched">El campo es
+                        obligatorio</mat-error>
+                </mat-form-field>
+
                 <button mat-raised-button type="submit" color="primary">Enviar</button>
             </form>
         </mat-card-content>

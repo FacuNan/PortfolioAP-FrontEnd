@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionServiceService } from 'src/app/servicios/educacion-service.service';
@@ -10,7 +11,13 @@ import { EducacionServiceService } from 'src/app/servicios/educacion-service.ser
 })
 export class EditarEducacionComponent implements OnInit {
   edu: Educacion = null;
-  constructor(private sEducacion: EducacionServiceService, private router: Router, private activateRouter: ActivatedRoute) { }
+
+  validacionEducacion: FormGroup = new FormGroup({});
+
+
+  constructor(private sEducacion: EducacionServiceService, private router: Router, private activateRouter: ActivatedRoute, private formBuilder: FormBuilder) { }
+
+
   ngOnInit(): void {
     const id = this.activateRouter.snapshot.params['id']
 
@@ -19,6 +26,17 @@ export class EditarEducacionComponent implements OnInit {
     }, err => {
       alert('La educacion no puede ser actualizada')
     })
+
+    //Validacion de formulario
+
+    this.validacionEducacion = this.formBuilder.group({
+      nombreEducacion: ['', Validators.compose([Validators.required, Validators.minLength(100)])],
+      institucion: ['', Validators.compose([Validators.required, Validators.maxLength(50)])],
+      descripcion: ['', Validators.compose([Validators.required, Validators.maxLength(200)])],
+      fechaInicioEdu: ['', Validators.required],
+      fechaTerminacionEdu: ['', Validators.required]
+    })
+
   }
   onUpdate(): void {
     const id = this.activateRouter.snapshot.params['id'];
@@ -30,5 +48,22 @@ export class EditarEducacionComponent implements OnInit {
       this.router.navigate(['']);
     })
 
+  }
+
+  get nombreEducacion() {
+    return this.validacionEducacion.get('nombreEducacion')
+  }
+
+  get institucion() {
+    return this.validacionEducacion.get('institucion')
+  }
+  get descripcion() {
+    return this.validacionEducacion.get('descripcion');
+  }
+  get fechaInicioEdu() {
+    return this.validacionEducacion.get('fechaInicioEdu')
+  }
+  get fechaTerminacionEdu() {
+    return this.validacionEducacion.get('fechaTerminacionEdu')
   }
 }

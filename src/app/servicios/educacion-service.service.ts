@@ -7,8 +7,9 @@ import { Educacion } from '../model/educacion';
 @Injectable({
   providedIn: 'root'
 })
-export class EducacionServiceService {
-edu = "http://localhost:8080/educacion/"
+export class EducacionServiceService{
+
+edu = "https://portfolioap-mgzz.onrender.com/educacion/"
   constructor(private httpclient: HttpClient) { }
 
   public lista():Observable<Educacion[]>{

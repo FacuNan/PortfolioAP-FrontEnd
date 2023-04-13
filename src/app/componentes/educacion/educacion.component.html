@@ -3,10 +3,10 @@
       <h1>Educacion</h1>
     </div>
     <button class="btn btn-success" *ngIf="isLogged" routerLink="/home/nuevaEducacion"><i class="bi bi-plus-square"></i></button>
-    <div class="Educacion" id="educacion" *ngFor="let educacion of educacion">
+    <div class="Educacion animate__animated animate__fadeInDown" id="educacion" *ngFor="let educacion of educacion">
 
       <div class="anio">
-        <h2>{{educacion.fechaInicio}}-{{educacion.fechaTerminacion}}</h2>
+        <h2>{{educacion.fechaInicio}}/{{educacion.fechaTerminacion}}</h2>
         <h3>{{educacion.titulo}}</h3>
       </div>
       <div class="detalles">
@@ -15,6 +15,7 @@
           <i class="bi bi-trash3" *ngIf="isLogged" (click)="Delete(educacion.id)"></i>
           
         </div>
+        <h2>{{educacion.institucion}}</h2>
         <h2>{{educacion.descripcion}}</h2>
 
 

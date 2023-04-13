@@ -7,7 +7,7 @@ import { Skills } from '../model/skills';
   providedIn: 'root'
 })
 export class SkillsService {
-  urlSkills = "http://localhost:8080/skills"
+  urlSkills = "https://portfolioap-mgzz.onrender.com/skills"
 
   constructor(private httpClient: HttpClient) { }
 

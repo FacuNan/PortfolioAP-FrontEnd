@@ -7,7 +7,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaServiceService {
-  explab = "http://localhost:8080/experienciaLaboral/";
+  explab = "https://portfolioap-mgzz.onrender.com/experienciaLaboral/";
 
 
 
