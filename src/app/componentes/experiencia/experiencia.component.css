@@ -36,8 +36,14 @@
 /*Boton de editar*/
 
 @media (max-width:600px){
+    .experiencia{
+        height:auto;
+      position:absolute;
+      z-index:2;
+    }
     .Experiencia{
-        flex-direction: column;
+        flex-direction: column-reverse;
+        height:auto;
       
     }
     .anio{
