@@ -1,17 +1,24 @@
 /**encabezado**/
+.skill{
+    background-color:aliceblue;
+    width:100%;
+    height:calc(100vh - 70px);
+    padding: 10px 20px;
+    border: solid 1px;
+
+
+}
 mat-card-header {
     display: flex;
     align-items: center;
     flex-direction: column;
-
 }
 
 /**contenido**/
 .circle {
     width: 100%;
     display: flex;
-    padding: 30px;
-
+    padding:  10px 60px;
 }
 
 .list-circle {
@@ -20,6 +27,7 @@ mat-card-header {
     padding: 5px;
     border-radius: 10px;
     text-align: center;
+    background-color: whitesmoke;
 
 
 }
@@ -31,12 +39,32 @@ mat-card-header {
 }
 
 @media(max-width:800px){
+    .skill{
+        width:100%;
+        position:absolute;
+        z-index:2;
+        height: auto;
+
+    }
+
     .circle {
         width: 100%;
         display: flex;
         flex-direction:column;
         align-items:center;
+        justify-content: center;
         padding: 30px;
+    
+    
        
     }
+
+    .list-circle{
+        width:90%;
+       
+    }
+
+
+
+ 
 }

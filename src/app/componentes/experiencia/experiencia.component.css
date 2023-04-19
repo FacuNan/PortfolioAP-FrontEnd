@@ -6,6 +6,7 @@
     border-radius: 10px;
     text-align: center;
     padding: 30px;
+    background-color:whitesmoke;
 }
 .Experiencia {
     display: flex;
@@ -36,8 +37,14 @@
 /*Boton de editar*/
 
 @media (max-width:600px){
+    .experiencia{
+        height:auto;
+      position:absolute;
+      z-index:2;
+    }
     .Experiencia{
-        flex-direction: column;
+        flex-direction: column-reverse;
+        height:auto;
       
     }
     .anio{

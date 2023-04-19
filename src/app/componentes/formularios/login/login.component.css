@@ -8,10 +8,19 @@ background: #eee;
 .h-custom {
 height: calc(100% - 73px);
 }
+
+@media(max-width:800px){
+.vh-100{
+position:absolute;
+z-index:2;
+}
+
 @media (max-width: 450px) {
 .h-custom {
 height: 100%;
 }
+}
+
 }
 
 

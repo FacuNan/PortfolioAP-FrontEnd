@@ -13,6 +13,7 @@
     border: black solid 1px;
     position: absolute;
     z-index: 1;
+    background-color:aliceblue;
 
 }
 
@@ -76,11 +77,21 @@
 }
 
 @media (max-width:800px) {
+    .proyectos{
+        height:auto;
+        position:absolute;
+        z-index:2;
+    }
     .proyectos-lista {
         justify-content: center;
         flex-direction: column;
         align-items: center;
         z-index:1;
+        width:100%;
+    }
+
+    .proyecto{
+        width:70%;
     }
 
 }

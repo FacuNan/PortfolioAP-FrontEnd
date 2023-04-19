@@ -49,6 +49,10 @@
 }
 
 @media(max-width: 700px) {
+    .contacto{
+        position:absolute;
+        z-index:2;
+    }
     .formulario {
         margin: 5px;
         width: 100%;
