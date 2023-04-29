@@ -12,13 +12,16 @@ mat-card-header {
     display: flex;
     align-items: center;
     flex-direction: column;
+    
 }
 
 /**contenido**/
 .circle {
     width: 100%;
     display: flex;
+    justify-content: center;
     padding:  10px 60px;
+    flex-wrap: wrap;
 }
 
 .list-circle {

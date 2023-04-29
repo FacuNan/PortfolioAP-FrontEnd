@@ -6,30 +6,42 @@
         <mat-card-content>
             <form (ngSubmit)="onUpdate()" class="formulario" novalidate #f="ngForm" [formGroup]="validacionEducacion">
                 <mat-form-field>
-                    <input matInput type="text" placeholder="Nombre de la educacion" name="titulo" id="titulo" [(ngModel)]="edu.titulo" formControlName="nombreEducacion">
-                    <mat-error *ngIf="nombreEducacion?.errors?.['required'] &&nombreEducacion?.touched">El nombre de la educacion es obligatorio</mat-error>
-                    <mat-error *ngIf="nombreEducacion?.errors?.['maxLength(100)']">El campo no puede exceder los 50 caracteres</mat-error>
+                    <input matInput type="text" placeholder="Nombre de la educacion" name="titulo" id="titulo"
+                        [(ngModel)]="edu.titulo" formControlName="nombreEducacion">
+                    <mat-error *ngIf="nombreEducacion?.errors?.['required'] &&nombreEducacion?.touched">El nombre de la
+                        educacion es obligatorio</mat-error>
+                    <mat-error *ngIf="nombreEducacion?.errors?.['maxLength(100)']">El campo no puede exceder los 50
+                        caracteres</mat-error>
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput type="text" placeholder="institucion" name="institucion" id="institucion" [(ngModel)]="edu.institucion" formControlName="institucion">
-                    <mat-error *ngIf="institucion?.errors?.['required'] && institucion?.touched">La institucion es obligatoria</mat-error>
+                    <input matInput type="text" placeholder="institucion" name="institucion" id="institucion"
+                        [(ngModel)]="edu.institucion" formControlName="institucion">
+                    <mat-error *ngIf="institucion?.errors?.['required'] && institucion?.touched">La institucion es
+                        obligatoria</mat-error>
 
-                    <mat-error *ngIf="institucion?.errors?.['maxLength(50)'] && institucion?.touched">La institucion es obligatoria</mat-error>
+                    <mat-error *ngIf="institucion?.errors?.['maxLength(50)'] && institucion?.touched">La institucion es
+                        obligatoria</mat-error>
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput type="text" placeholder="descripcion" name="descripcion" [(ngModel)]="edu.descripcion" formControlName="descripcion">
-                    <mat-error *ngIf="descripcion?.errors?.['required'] && descripcion?.touched">La descripcion es obligatoria</mat-error>
+                    <input matInput type="text" placeholder="descripcion" name="descripcion"
+                        [(ngModel)]="edu.descripcion" formControlName="descripcion">
+                    <mat-error *ngIf="descripcion?.errors?.['required'] && descripcion?.touched">La descripcion es
+                        obligatoria</mat-error>
 
-                    <mat-error *ngIf="descripcion?.errors?.['maxLength(200) && descripcion?.touched']">No se puede exceder los 200 caracteres</mat-error>
+                    <mat-error *ngIf="descripcion?.errors?.['maxLength(200) && descripcion?.touched']">No se puede
+                        exceder los 200 caracteres</mat-error>
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput type="date" placeholder="Fecha de inicio" name="fechaInicio" [(ngModel)]="edu.fechaInicio" formControlName="fechaInicioEdu">
-                    <mat-error *ngIf="fechaInicioEdu?.errors?.['required'] &&fechaInicioEdu?.touched">El campo no puede estar vacio</mat-error>
+                    <input matInput type="date" placeholder="Fecha de inicio" name="fechaInicio"
+                        [(ngModel)]="edu.fechaInicio" formControlName="fechaInicioEdu">
+                    <mat-error *ngIf="fechaInicioEdu?.errors?.['required'] &&fechaInicioEdu?.touched">El campo no puede
+                        estar vacio</mat-error>
                 </mat-form-field>
                 <mat-form-field>
                     <input matInput type="date" placeholder="Fecha de terminacion" name="fechaTerminacion"
                         id="fechaTerminacion" [(ngModel)]="edu.fechaTerminacion" formControlName="fechaTerminacionEdu">
-                        <mat-error *ngIf="fechaTerminacionEdu?.errors?.['required'] && fechaTerminacionEdu?.touched">El campo no puede estar vacio</mat-error>
+                    <mat-error *ngIf="fechaTerminacionEdu?.errors?.['required'] && fechaTerminacionEdu?.touched">El
+                        campo no puede estar vacio</mat-error>
                 </mat-form-field>
                 <button mat-raised-button type="submit" color="primary">Enviar</button>
             </form>
